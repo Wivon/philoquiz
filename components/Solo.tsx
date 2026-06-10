@@ -5,10 +5,7 @@ import { useState } from "react";
 import { NOTIONS, notionLabel } from "@/lib/notions";
 import { buildQuiz } from "@/lib/questions";
 import { computeScore } from "@/lib/scoring";
-import {
-  DEFAULT_QUESTION_COUNT,
-  QUESTION_COUNT_OPTIONS,
-} from "@/lib/socket-events";
+import { DEFAULT_QUESTION_COUNT, QUESTION_COUNT_OPTIONS } from "@/lib/realtime";
 import type { NotionId, Question } from "@/lib/types";
 import { AnswerGrid } from "./AnswerGrid";
 import { Countdown } from "./Countdown";

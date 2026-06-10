@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import type { LiveQuestion } from "@/lib/socket-events";
+import type { LiveQuestion } from "@/lib/types";
 import { AnswerGrid } from "./AnswerGrid";
 import { Countdown } from "./Countdown";
 

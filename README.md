@@ -36,6 +36,24 @@ npm run start        # NODE_ENV=production, sert le build optimisé
 
 Le port se change avec `PORT=4000 npm run dev`.
 
+## ☁️ Vercel & multijoueur : à lire
+
+Le **multijoueur est uniquement local (LAN)**. C'est l'ordinateur **hôte** qui exécute
+l'app (`npm run dev` ou `npm run start`) et qui **détient l'état de la partie** ; les autres
+joueurs s'y connectent via l'adresse réseau + le code PIN. Tout passe par un serveur
+**Socket.IO** persistant lancé sur la machine hôte (`server.ts`).
+
+➡️ **Vercel ne peut pas héberger le multijoueur.** Vercel exécute des fonctions
+_serverless_ sans processus persistant : il n'y a donc aucun serveur Socket.IO, et la
+connexion temps réel échoue. Si vous ouvrez l'app déployée sur Vercel et cliquez sur
+« Créer une partie », un message vous le rappelle. **Sur Vercel, seul le mode solo
+fonctionne.**
+
+Pour jouer à plusieurs : lancez l'app **en local** sur la machine hôte et partagez
+l'adresse réseau (ex. `http://192.168.1.42:3000`). Si vous voulez un déploiement en ligne
+pour le multijoueur, il faut une plateforme qui supporte les serveurs Node persistants
+(Render, Railway, Fly.io, un VPS…), pas Vercel.
+
 ## 🎮 Comment jouer
 
 1. **Créer une partie** → entrez prénom + avatar → un **code PIN** est généré.

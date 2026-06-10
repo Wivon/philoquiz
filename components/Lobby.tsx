@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { NOTIONS, notionLabel } from "@/lib/notions";
-import { QUESTION_COUNT_OPTIONS } from "@/lib/socket-events";
+import { QUESTION_COUNT_OPTIONS } from "@/lib/realtime";
 import type { NotionId, RoomState } from "@/lib/types";
 import { NotionPicker } from "./NotionPicker";
 import { Button, Card, PlayerChip } from "./ui";
@@ -11,7 +11,7 @@ import { Button, Card, PlayerChip } from "./ui";
 export function Lobby({
   room,
   myId,
-  urls,
+  shareUrl,
   onSetNotions,
   onSetCount,
   onStart,
@@ -19,7 +19,7 @@ export function Lobby({
 }: {
   room: RoomState;
   myId: string | null;
-  urls: string[];
+  shareUrl: string;
   onSetNotions: (n: NotionId[]) => void;
   onSetCount: (c: number) => void;
   onStart: () => void;
@@ -34,8 +34,6 @@ export function Lobby({
     else set.add(id);
     onSetNotions([...set]);
   };
-
-  const shareUrl = urls.find((u) => !u.includes("localhost")) ?? urls[0];
 
   const copyPin = async () => {
     try {
@@ -65,10 +63,11 @@ export function Lobby({
         </p>
         {shareUrl && (
           <p className="mt-3 text-violet-700">
-            Sur le même réseau Wi-Fi, ouvrez{" "}
+            Les autres joueurs ouvrent{" "}
             <span className="rounded-lg bg-violet-100 px-2 py-1 font-black">
               {shareUrl}
-            </span>
+            </span>{" "}
+            et rejoignent avec ce PIN (même Wi-Fi recommandé).
           </p>
         )}
       </Card>

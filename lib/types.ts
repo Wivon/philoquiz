@@ -48,6 +48,12 @@ export interface PublicQuestion {
   duration: number;
 }
 
+/** A question as pushed to clients during play (correct answer hidden). */
+export interface LiveQuestion extends PublicQuestion {
+  /** Host timestamp (ms) when the question started. */
+  startedAt: number;
+}
+
 export interface Player {
   id: string;
   name: string;

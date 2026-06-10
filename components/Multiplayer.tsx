@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { useGame } from "@/hooks/useGame";
+import { CONNECTION_ERROR, useGame } from "@/hooks/useGame";
 import { Identity } from "./Identity";
 import { Lobby } from "./Lobby";
 import { QuestionView } from "./QuestionView";
@@ -33,6 +33,9 @@ export function Multiplayer({
         if (res.ok) setJoined(true);
         else setError(res.error ?? "Impossible de rejoindre la partie.");
       }
+    } catch {
+      // Peer failed to open (broker unreachable / no internet).
+      setError(CONNECTION_ERROR);
     } finally {
       setBusy(false);
     }
@@ -100,7 +103,7 @@ export function Multiplayer({
         <Lobby
           room={room}
           myId={myId}
-          urls={game.urls}
+          shareUrl={game.shareUrl}
           onSetNotions={game.setNotions}
           onSetCount={game.setQuestionCount}
           onStart={game.start}

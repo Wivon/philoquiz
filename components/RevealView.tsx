@@ -1,6 +1,6 @@
 "use client";
 
-import type { LiveQuestion } from "@/lib/socket-events";
+import type { LiveQuestion } from "@/lib/types";
 import type { QuestionResult } from "@/lib/types";
 import { AnswerGrid } from "./AnswerGrid";
 import { Button, Card } from "./ui";
