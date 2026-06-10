@@ -57,8 +57,10 @@ export function Home({
       </div>
 
       <p className="max-w-md text-sm text-white/60">
-        Pour jouer à plusieurs, connectez vos appareils au même réseau Wi-Fi.
-        L'hôte crée la partie et partage le code PIN.
+        PhiloQuiz - créé par des élèves du lycée Albert Claveille
+        <br /> <a href="https://github.com/Wivon/philoquiz" target="_blank" rel="noopener noreferrer" className="hover:underline">
+          Projet open-source
+        </a>
       </p>
     </div>
   );
