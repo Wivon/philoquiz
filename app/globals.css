@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --answer-0: #e21b3c; /* red    – triangle */
+  --answer-1: #1368ce; /* blue   – diamond  */
+  --answer-2: #d89e00; /* yellow – circle   */
+  --answer-3: #26890c; /* green  – square   */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  color: #1a1333;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #7b2ff7 0%, transparent 60%),
+    radial-gradient(1000px 700px at 100% 0%, #e0218a 0%, transparent 55%),
+    linear-gradient(160deg, #46178f 0%, #2d0b6b 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Answer tiles (Kahoot-style colours + shapes) ---- */
+.answer-tile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.25;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.08s ease,
+    filter 0.15s ease,
+    opacity 0.2s ease;
+}
+.answer-tile:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.25);
+}
+.answer-tile:disabled {
+  cursor: default;
+}
+.answer-shape {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.a0 {
+  background: var(--answer-0);
+}
+.a1 {
+  background: var(--answer-1);
+}
+.a2 {
+  background: var(--answer-2);
+}
+.a3 {
+  background: var(--answer-3);
+}
+.tile-dim {
+  opacity: 0.35;
+  filter: grayscale(0.4);
+}
+.tile-correct {
+  outline: 4px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* ---- Animations ---- */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes gain {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-26px) scale(1.1);
+    opacity: 0;
+  }
+}
+.pop-in {
+  animation: popIn 0.25s ease both;
+}
+.float-up {
+  animation: floatUp 0.35s ease both;
+}
+.gain-badge {
+  animation: gain 1.2s ease forwards;
+}
+
+/* Countdown ring */
+.ring-track {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+.ring-progress {
+  stroke: #ffd54a;
+  transition: stroke-dashoffset 0.25s linear;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}

@@ -1,0 +1,43 @@
+// A palette of emoji avatars players can pick, à la Kahoot.
+export const AVATARS: string[] = [
+  "🦊",
+  "🐼",
+  "🦁",
+  "🐯",
+  "🐸",
+  "🐙",
+  "🦉",
+  "🦄",
+  "🐝",
+  "🐺",
+  "🐨",
+  "🐵",
+  "🦖",
+  "🐲",
+  "🦋",
+  "🐧",
+  "🦅",
+  "🦩",
+  "🐬",
+  "🦈",
+  "🌟",
+  "🔥",
+  "⚡",
+  "🌈",
+  "🍀",
+  "🎲",
+  "👑",
+  "🎩",
+  "🤖",
+  "👽",
+  "🧠",
+  "💡",
+  "🎯",
+  "🚀",
+  "⚽",
+  "🎸",
+];
+
+export function randomAvatar(): string {
+  return AVATARS[Math.floor(Math.random() * AVATARS.length)];
+}
