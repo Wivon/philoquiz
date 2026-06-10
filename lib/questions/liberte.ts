@@ -4,10 +4,10 @@ export const liberteQuestions: RawQuestion[] = [
   {
     question: "Le « libre arbitre » désigne :",
     answers: [
-      "Le pouvoir de la volonté de choisir entre plusieurs possibles",
-      "L'absence totale de toute contrainte physique",
-      "Le déterminisme universel",
-      "L'obéissance aux lois",
+      "Le pouvoir de la volonté de choisir entre plusieurs possibles sans y être contraint",
+      "L'absence totale de toute contrainte physique ou sociale sur le corps",
+      "La thèse selon laquelle chaque événement est rigoureusement causé par un autre",
+      "Le fait d'obéir spontanément aux lois de la cité sans y être forcé",
     ],
     correct: 0,
     explanation:
@@ -18,9 +18,9 @@ export const liberteQuestions: RawQuestion[] = [
       "Le déterminisme soutient que :",
     answers: [
       "Tout événement a une cause, si bien que rien n'arrive sans nécessité",
-      "Rien n'a de cause",
-      "L'homme est totalement libre",
-      "Le hasard gouverne tout",
+      "Aucun événement n'a de cause identifiable dans la nature",
+      "L'homme échappe aux lois naturelles grâce à sa volonté libre",
+      "Le hasard irréductible gouverne l'ensemble des phénomènes du monde",
     ],
     correct: 0,
     explanation:
@@ -30,10 +30,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Spinoza, le sentiment de liberté (libre arbitre) est :",
     answers: [
-      "Une illusion : nous ignorons les causes qui nous déterminent",
-      "La vérité première et indubitable",
-      "Un don de Dieu garantissant le hasard",
-      "Une faculté du corps seul",
+      "Une illusion : nous ignorons les causes qui nous déterminent à agir",
+      "La vérité première et indubitable de toute philosophie rationnelle",
+      "Un don de Dieu qui introduit un hasard réel dans la chaîne des causes",
+      "Une faculté propre au corps, distincte des opérations de l'esprit",
     ],
     correct: 0,
     explanation:
@@ -43,10 +43,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Spinoza, la véritable liberté consiste alors à :",
     answers: [
-      "Connaître la nécessité par la raison et agir selon sa propre nature",
-      "Échapper à toute cause",
-      "Faire n'importe quoi",
-      "Obéir aveuglément",
+      "Connaître la nécessité par la raison et agir selon sa propre nature profonde",
+      "Échapper à toute cause en suspendant délibérément l'enchaînement naturel",
+      "Faire n'importe quoi au gré de ses envies immédiates sans se contraindre",
+      "Obéir aveuglément à l'autorité extérieure sans chercher à comprendre",
     ],
     correct: 0,
     explanation:
@@ -56,10 +56,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Sartre, l'homme est « condamné à être libre » : cela signifie que :",
     answers: [
-      "Sans nature donnée, il choisit toujours et est responsable de ce qu'il est",
-      "Il est prisonnier de son passé",
-      "Il n'a aucun choix",
-      "La liberté est un repos",
+      "Sans nature donnée, il choisit toujours et est pleinement responsable de ce qu'il est",
+      "Il est prisonnier de son passé et ne peut jamais rompre avec son histoire",
+      "Il n'a aucun choix réel, car la société décide de tout à sa place",
+      "La liberté est un état de repos où l'on est enfin délivré de tout souci",
     ],
     correct: 0,
     explanation:
@@ -70,9 +70,9 @@ export const liberteQuestions: RawQuestion[] = [
       "La liberté politique, selon une distinction classique, peut être :",
     answers: [
       "Liberté-indépendance (faire ce qu'on veut) ou liberté-autonomie (obéir à la loi qu'on s'est donnée)",
-      "Toujours identique à la licence",
-      "Réservée aux gouvernants",
-      "L'absence de toute loi",
+      "Toujours identique à la licence, c'est-à-dire au droit de tout faire sans limite",
+      "Un privilège réservé aux gouvernants qui exercent le pouvoir souverain",
+      "La simple absence de toute loi positive dans un état de nature originel",
     ],
     correct: 0,
     explanation:
@@ -81,7 +81,12 @@ export const liberteQuestions: RawQuestion[] = [
   {
     question:
       "Pour Rousseau, « l'obéissance à la loi qu'on s'est prescrite » est :",
-    answers: ["La liberté", "L'esclavage", "Le hasard", "La nature brute"],
+    answers: [
+      "La liberté civile, conquise par le contrat social contre la dépendance naturelle",
+      "L'esclavage volontaire d'un peuple soumis à un souverain despotique",
+      "Le pur hasard d'un accord provisoire entre des individus en conflit",
+      "Le retour à la nature brute antérieure à toute organisation politique",
+    ],
     correct: 0,
     explanation:
       "La liberté civile n'est pas l'absence de loi mais l'autonomie : en obéissant à la loi que j'ai contribué à faire, je n'obéis qu'à moi-même.",
@@ -90,10 +95,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Kant, la liberté transcendantale est :",
     answers: [
-      "Le pouvoir de commencer de soi-même une série causale, condition de la moralité",
-      "Le simple fait de ne pas être enchaîné",
-      "Une illusion de l'imagination",
-      "La soumission aux penchants",
+      "Le pouvoir de commencer soi-même une série causale, condition de la moralité",
+      "Le simple fait de ne pas être enchaîné ni emprisonné physiquement par autrui",
+      "Une illusion produite par l'imagination débordant les limites de l'expérience",
+      "La soumission consentie aux penchants sensibles qui orientent naturellement l'action",
     ],
     correct: 0,
     explanation:
@@ -104,9 +109,9 @@ export const liberteQuestions: RawQuestion[] = [
       "Le « compatibilisme » (Leibniz, Hume) soutient que :",
     answers: [
       "Liberté et déterminisme sont conciliables : être libre, c'est agir sans contrainte extérieure, non sans cause",
-      "La liberté exige l'absence de toute cause",
-      "Le déterminisme est faux",
-      "La liberté n'existe pas",
+      "La liberté authentique exige l'absence totale de toute cause précédant l'acte",
+      "Le déterminisme universel est faux, car la physique moderne y a mis fin définitivement",
+      "La liberté n'existe tout simplement pas et n'est qu'un mot vide de sens",
     ],
     correct: 0,
     explanation:
@@ -116,10 +121,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Descartes, la liberté de la volonté est :",
     answers: [
-      "Infinie : c'est par elle surtout que l'homme porte « l'image de Dieu »",
-      "Limitée comme l'entendement",
-      "Une pure illusion",
-      "Identique à celle des animaux",
+      "Infinie : c'est par elle surtout que l'homme porte « l'image de Dieu » en lui",
+      "Limitée comme l'entendement, car elle ne peut vouloir que ce qui est connu",
+      "Une pure illusion produite par l'ignorance des causes mécaniques du corps",
+      "Identique à celle des animaux, qui agissent eux aussi selon leurs désirs propres",
     ],
     correct: 0,
     explanation:
@@ -129,10 +134,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Le degré le plus bas de la liberté, selon Descartes, est :",
     answers: [
-      "La « liberté d'indifférence » : choisir sans raison de pencher d'un côté",
-      "La connaissance claire du vrai",
-      "L'obéissance à Dieu",
-      "L'action vertueuse",
+      "La « liberté d'indifférence » : choisir sans aucune raison de pencher d'un côté",
+      "La connaissance claire et distincte du vrai qui emporte l'assentiment naturel",
+      "L'obéissance délibérée à Dieu fondée sur la compréhension de sa bonté parfaite",
+      "L'action vertueuse guidée par des raisons solides et une volonté bien réglée",
     ],
     correct: 0,
     explanation:
@@ -143,9 +148,9 @@ export const liberteQuestions: RawQuestion[] = [
       "Distinguer la liberté de la « licence », c'est rappeler que la liberté :",
     answers: [
       "N'est pas faire tout ce qui plaît, mais suppose des règles et le respect d'autrui",
-      "Consiste à n'obéir à rien",
-      "Est l'absence de toute limite",
-      "Interdit toute action",
+      "Consiste précisément à n'obéir à rien ni à personne en aucune circonstance",
+      "Est par définition sans limite et ne peut jamais être légitimement restreinte",
+      "Interdit toute action spontanée et exige une justification permanente de ses actes",
     ],
     correct: 0,
     explanation:
@@ -155,10 +160,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "Pour Bergson, l'acte libre est celui qui :",
     answers: [
-      "Émane de la personne tout entière, exprimant sa durée intérieure",
-      "Est totalement imprévisible et absurde",
-      "Obéit à une cause mécanique",
-      "Répète une habitude",
+      "Émane de la personne tout entière et exprime son moi profond dans la durée",
+      "Est totalement imprévisible, absurde et coupé de toute logique personnelle",
+      "Obéit à une cause mécanique externe qui s'impose à la conscience de l'agent",
+      "Répète une habitude bien ancrée et donc parfaitement maîtrisée par le sujet",
     ],
     correct: 0,
     explanation:
@@ -168,10 +173,10 @@ export const liberteQuestions: RawQuestion[] = [
     question:
       "L'expérience de l'angoisse révèle la liberté, selon les existentialistes, parce qu'elle est :",
     answers: [
-      "Le vertige éprouvé devant l'infini des possibles que je dois choisir",
-      "La peur d'un objet précis",
-      "Un trouble purement physique",
-      "Une maladie à soigner",
+      "Le vertige éprouvé devant l'infini des possibles que je dois choisir sans guide",
+      "La peur intense d'un objet précis et identifiable qui menace notre existence",
+      "Un trouble purement physique lié au fonctionnement du système nerveux central",
+      "Une maladie psychologique à soigner par une thérapie adaptée et médicaments",
     ],
     correct: 0,
     explanation:
@@ -182,9 +187,9 @@ export const liberteQuestions: RawQuestion[] = [
       "« On ne naît pas libre, on le devient » suggère que la liberté est :",
     answers: [
       "Une conquête : elle s'acquiert par l'éducation, la raison et la maîtrise de soi",
-      "Un fait biologique immédiat",
-      "Impossible",
-      "Donnée toute faite à la naissance",
+      "Un fait biologique immédiat présent dès la naissance chez tout être humain",
+      "Quelque chose d'impossible que nulle éducation ni culture ne saurait produire",
+      "Donnée toute faite dès la naissance, indépendamment de tout apprentissage",
     ],
     correct: 0,
     explanation:

@@ -6,9 +6,9 @@ export const scienceQuestions: RawQuestion[] = [
       "Distinguer une opinion d'un savoir scientifique, c'est rappeler que la science :",
     answers: [
       "Est démontrée ou expérimentalement établie, universelle et nécessaire, non un simple avis",
-      "N'est qu'une opinion majoritaire",
-      "Repose sur la croyance",
-      "Varie selon les goûts",
+      "Est une opinion partagée par une majorité de chercheurs spécialisés",
+      "Repose sur une croyance collective validée par la tradition culturelle",
+      "Varie selon les cultures et les époques sans prétendre à l'universalité",
     ],
     correct: 0,
     explanation:
@@ -18,10 +18,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Les mathématiques procèdent par démonstration à partir de :",
     answers: [
-      "Définitions, axiomes et postulats posés au départ",
-      "L'expérience sensible seule",
-      "Le témoignage",
-      "L'autorité des maîtres",
+      "Définitions, axiomes et postulats posés au départ sans exiger de preuve",
+      "L'observation répétée de phénomènes naturels vérifiés en laboratoire",
+      "Le témoignage fiable de savants reconnus par la communauté scientifique",
+      "L'autorité des maîtres transmise de génération en génération",
     ],
     correct: 0,
     explanation:
@@ -31,10 +31,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "La méthode expérimentale (Claude Bernard) suit l'ordre :",
     answers: [
-      "Observation, hypothèse, expérimentation, vérification",
-      "Croyance, dogme, autorité",
-      "Imagination pure",
-      "Déduction sans aucune observation",
+      "Observation, hypothèse, expérimentation puis vérification du résultat obtenu",
+      "Croyance initiale, dogme établi, puis appel à une autorité reconnue",
+      "Intuition pure suivie d'une déduction logique sans retour au réel",
+      "Déduction abstraite sans recours à aucune observation empirique préalable",
     ],
     correct: 0,
     explanation:
@@ -44,10 +44,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Pour Karl Popper, ce qui distingue une théorie scientifique d'une pseudo-science est :",
     answers: [
-      "La falsifiabilité : pouvoir être réfutée par l'expérience",
-      "Le fait d'être confirmée par tout",
-      "Sa popularité",
-      "Son ancienneté",
+      "La falsifiabilité : la théorie peut être réfutée par une expérience cruciale",
+      "Le fait d'être confirmée par tous les résultats disponibles sans exception possible",
+      "Sa popularité auprès du grand public et la notoriété de ses défenseurs",
+      "Son ancienneté et sa longue tradition d'usage dans la communauté savante",
     ],
     correct: 0,
     explanation:
@@ -57,10 +57,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Pour Bachelard, la connaissance scientifique progresse en :",
     answers: [
-      "Rompant avec les évidences premières et les « obstacles épistémologiques »",
-      "Accumulant les opinions communes",
-      "Se fiant à la perception immédiate",
-      "Refusant toute théorie",
+      "Rompant avec les évidences premières et les « obstacles épistémologiques » du sens commun",
+      "Accumulant patiemment les opinions communes et les intuitions populaires vérifiées",
+      "Se fiant à la perception immédiate comme point de départ fiable et solide",
+      "Refusant toute théorie au profit d'une description neutre des faits observés",
     ],
     correct: 0,
     explanation:
@@ -71,9 +71,9 @@ export const scienceQuestions: RawQuestion[] = [
       "La distinction entre expliquer et comprendre (Dilthey) oppose :",
     answers: [
       "Les sciences de la nature (expliquer par des causes) et les sciences de l'esprit (comprendre le sens)",
-      "Deux mots synonymes",
-      "La physique et la chimie",
-      "Le vrai et le faux",
+      "Deux manières synonymes de désigner la même démarche intellectuelle rigoureuse",
+      "La physique fondamentale et la chimie appliquée dans leurs méthodes respectives",
+      "Le vrai savoir démontré et le faux savoir fondé sur de simples apparences trompeuses",
     ],
     correct: 0,
     explanation:
@@ -83,10 +83,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Pour Thomas Kuhn, l'histoire des sciences procède par :",
     answers: [
-      "Des « révolutions scientifiques » : changements de paradigme, non une accumulation continue",
-      "Une simple addition de vérités",
-      "Le hasard pur",
-      "Un déclin constant",
+      "Des « révolutions scientifiques » : ruptures de paradigme, non une simple accumulation continue",
+      "Une addition progressive et linéaire de vérités qui ne se contredisent jamais entre elles",
+      "Le hasard pur des découvertes fortuites réalisées sans intention ni méthode préalable",
+      "Un déclin constant compensé par de rares moments de génie individuel exceptionnel",
     ],
     correct: 0,
     explanation:
@@ -96,10 +96,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Une loi scientifique énonce :",
     answers: [
-      "Un rapport constant et nécessaire entre des phénomènes (relation de cause à effet)",
-      "Une obligation morale",
-      "Une décision politique",
-      "Un fait isolé sans portée",
+      "Un rapport constant et nécessaire entre des phénomènes, permettant de prévoir leurs effets",
+      "Une obligation morale s'imposant à tout être raisonnable indépendamment de sa culture",
+      "Une décision politique adoptée par une assemblée pour réguler la vie en société",
+      "Un fait isolé et singulier dépourvu de portée générale ou de valeur prédictive",
     ],
     correct: 0,
     explanation:
@@ -109,10 +109,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Le caractère « hypothétique » des théories scientifiques signifie que :",
     answers: [
-      "Une théorie reste révisable : elle vaut tant qu'elle n'est pas réfutée, sans certitude absolue définitive",
-      "La science ne sait rien",
-      "Tout se vaut",
-      "Les théories sont éternellement vraies",
+      "Une théorie reste révisable : elle vaut tant qu'elle n'est pas réfutée, sans certitude définitive",
+      "La science ne sait rien et n'offre aucune prise fiable sur la réalité du monde",
+      "Toutes les théories se valent également, peu importe leur degré de confirmation empirique",
+      "Les théories scientifiques, une fois validées, deviennent éternellement vraies et indépassables",
     ],
     correct: 0,
     explanation:
@@ -122,10 +122,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Le passage de la géométrie d'Euclide aux géométries non euclidiennes montre que :",
     answers: [
-      "Les axiomes ne sont pas des vérités évidentes mais des conventions fécondes",
-      "Les mathématiques sont fausses",
-      "La géométrie est inutile",
-      "Euclide avait tout faux",
+      "Les axiomes ne sont pas des vérités évidentes mais des conventions librement choisies et fécondes",
+      "Les mathématiques sont fondamentalement fausses et doivent être entièrement refondées",
+      "La géométrie est une discipline purement abstraite et inutile pour comprendre le monde réel",
+      "Euclide avait systématiquement tort et sa géométrie ne mérite aucune considération sérieuse",
     ],
     correct: 0,
     explanation:
@@ -136,9 +136,9 @@ export const scienceQuestions: RawQuestion[] = [
       "La question des limites éthiques de la science (Rabelais) tient dans la formule :",
     answers: [
       "« Science sans conscience n'est que ruine de l'âme »",
-      "« La science est toujours bonne »",
-      "« Il faut interdire la science »",
-      "« La conscience est inutile »",
+      "« La science est toujours bonne et ne peut jamais causer de tort »",
+      "« Il faut interdire la science pour préserver la dignité humaine »",
+      "« La conscience morale est inutile face à la puissance du progrès »",
     ],
     correct: 0,
     explanation:
@@ -149,9 +149,9 @@ export const scienceQuestions: RawQuestion[] = [
       "L'idée que les faits scientifiques sont « construits » et non simplement « donnés » signifie :",
     answers: [
       "Qu'un fait scientifique résulte d'instruments, de théories et de mesures, non de la seule perception",
-      "Que les faits sont inventés sans contrôle",
-      "Que la réalité n'existe pas",
-      "Que tout est subjectif",
+      "Que les faits sont librement inventés par les chercheurs sans contrainte ni contrôle extérieur",
+      "Que la réalité extérieure n'existe pas indépendamment de l'esprit qui la perçoit ou l'imagine",
+      "Que tout est subjectif et qu'aucune connaissance objective du monde n'est réellement possible",
     ],
     correct: 0,
     explanation:
@@ -162,9 +162,9 @@ export const scienceQuestions: RawQuestion[] = [
       "La différence entre une science « exacte » et une science « expérimentale » tient à ce que :",
     answers: [
       "La première (mathématiques) démontre a priori ; la seconde (physique) éprouve ses hypothèses dans l'expérience",
-      "L'une est vraie, l'autre fausse",
-      "Elles ne diffèrent en rien",
-      "L'une est ancienne, l'autre moderne",
+      "L'une produit des vérités certaines tandis que l'autre ne génère que des erreurs provisoires",
+      "Elles ne diffèrent en rien : toutes deux suivent exactement la même méthode déductive",
+      "L'une appartient à l'Antiquité et l'autre est une invention strictement moderne et récente",
     ],
     correct: 0,
     explanation:
@@ -174,10 +174,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "Le scientisme désigne la croyance excessive selon laquelle :",
     answers: [
-      "La science peut résoudre toutes les questions, y compris morales et métaphysiques",
-      "La science est sans valeur",
-      "La science doit être interdite",
-      "Seule la religion dit le vrai",
+      "La science peut résoudre toutes les questions, y compris les questions morales et métaphysiques",
+      "La science est sans valeur et doit être remplacée par d'autres formes de connaissance",
+      "La pratique scientifique doit être strictement interdite au nom de la foi religieuse",
+      "Seule la révélation religieuse dit le vrai sur le sens de la vie humaine et du cosmos",
     ],
     correct: 0,
     explanation:
@@ -187,10 +187,10 @@ export const scienceQuestions: RawQuestion[] = [
     question:
       "La notion d'« obstacle épistémologique » de Bachelard désigne :",
     answers: [
-      "Une habitude de pensée ou une évidence sensible qui freine la connaissance scientifique",
-      "Un appareil de laboratoire",
-      "Une erreur de calcul",
-      "Une loi de la nature",
+      "Une habitude de pensée ou une évidence sensible qui freine la connaissance scientifique rigoureuse",
+      "Un instrument de laboratoire défaillant qui perturbe la précision d'une mesure expérimentale",
+      "Une erreur de calcul commise par le chercheur lors d'une démonstration mathématique complexe",
+      "Une loi de la nature trop difficile à formuler pour être intégrée dans une théorie cohérente",
     ],
     correct: 0,
     explanation:

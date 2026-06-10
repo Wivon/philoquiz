@@ -5,9 +5,9 @@ export const natureQuestions: RawQuestion[] = [
     question: "Le mot « nature » (physis) peut d'abord désigner :",
     answers: [
       "L'ensemble de ce qui existe sans intervention humaine, et l'essence d'une chose",
-      "Uniquement les machines",
-      "Seulement les lois de l'État",
-      "Les œuvres d'art",
+      "L'ensemble des productions humaines organisées en société",
+      "L'ensemble des règles juridiques édictées par l'État",
+      "L'ensemble des œuvres d'art créées par les civilisations",
     ],
     correct: 0,
     explanation:
@@ -17,9 +17,9 @@ export const natureQuestions: RawQuestion[] = [
     question: "La nature s'oppose classiquement à :",
     answers: [
       "La culture et l'artifice (ce que l'homme produit et transforme)",
-      "L'univers",
-      "La matière",
-      "La vie",
+      "L'univers physique tel qu'il est donné à l'observation",
+      "La matière brute et les forces qui l'animent",
+      "La vie organique et ses processus biologiques",
     ],
     correct: 0,
     explanation:
@@ -30,9 +30,9 @@ export const natureQuestions: RawQuestion[] = [
       "Pour Descartes, l'homme doit se rendre « comme maître et possesseur de la nature » grâce à :",
     answers: [
       "La science et la technique, pour son utilité et sa santé",
-      "La prière",
-      "La contemplation passive",
-      "Le renoncement à connaître",
+      "La prière et la méditation spirituelle, pour s'unir au divin",
+      "La contemplation passive des phénomènes naturels sans intervenir",
+      "Le renoncement à connaître, pour vivre en harmonie avec elle",
     ],
     correct: 0,
     explanation:
@@ -43,9 +43,9 @@ export const natureQuestions: RawQuestion[] = [
       "Aristote affirme que « la nature ne fait rien en vain » : il défend une conception :",
     answers: [
       "Finaliste : chaque être a une fin (telos) vers laquelle il tend",
-      "Purement mécaniste",
-      "Hasardeuse",
-      "Antiscientifique",
+      "Mécaniste : chaque phénomène s'explique par ses seules causes efficientes",
+      "Aléatoire : les êtres naturels résultent d'un concours fortuit d'atomes",
+      "Dualiste : la nature suit à la fois la matière inerte et l'esprit divin",
     ],
     correct: 0,
     explanation:
@@ -56,9 +56,9 @@ export const natureQuestions: RawQuestion[] = [
       "La science moderne (Galilée, Descartes) conçoit plutôt la nature comme :",
     answers: [
       "Un mécanisme régi par des lois mathématiques, sans fins cachées",
-      "Un grand animal vivant",
-      "Une volonté divine arbitraire",
-      "Un poème",
+      "Un grand organisme vivant animé par une âme du monde",
+      "Une volonté divine s'exprimant librement dans chaque événement",
+      "Un poème cosmique que la raison ne peut que contempler",
     ],
     correct: 0,
     explanation:
@@ -69,9 +69,9 @@ export const natureQuestions: RawQuestion[] = [
       "L'« état de nature » chez les théoriciens du contrat est :",
     answers: [
       "Une fiction décrivant l'homme avant ou hors de toute société organisée",
-      "Une époque historique datée précisément",
-      "La vie à la campagne",
-      "L'écologie moderne",
+      "Une période historique précise et documentée par l'archéologie",
+      "La simple vie rurale en dehors des grandes villes industrielles",
+      "Le mouvement écologique contemporain de retour à la terre",
     ],
     correct: 0,
     explanation:
@@ -82,9 +82,9 @@ export const natureQuestions: RawQuestion[] = [
       "Pour Rousseau, l'homme à l'état de nature est :",
     answers: [
       "Naturellement bon (ni bon ni méchant), guidé par l'amour de soi et la pitié",
-      "Un loup pour l'homme",
-      "Déjà corrompu",
-      "Un être social par nature",
+      "Un loup pour l'homme, engagé dans une guerre de tous contre tous",
+      "Déjà corrompu par des passions sociales qu'il ne peut réprimer",
+      "Un être sociable par nature, qui aspire spontanément à la cité",
     ],
     correct: 0,
     explanation:
@@ -95,9 +95,9 @@ export const natureQuestions: RawQuestion[] = [
       "Affirmer qu'il existe une « nature humaine » revient à dire que :",
     answers: [
       "L'homme possède une essence commune et fixe, antérieure à ses choix",
-      "L'homme n'a aucune caractéristique",
-      "Chaque homme est totalement différent",
-      "L'homme est une machine",
+      "L'homme n'a aucune caractéristique partagée avec ses semblables",
+      "Chaque individu se définit de façon radicalement singulière et sans modèle",
+      "L'homme se réduit à un mécanisme biologique entièrement déterminé",
     ],
     correct: 0,
     explanation:
@@ -108,9 +108,9 @@ export const natureQuestions: RawQuestion[] = [
       "Pour Kant, l'homme appartient à la fois à la nature et à la liberté en tant qu'il est :",
     answers: [
       "Soumis aux lois physiques (phénomène) mais aussi être moral et libre (noumène)",
-      "Uniquement un animal",
-      "Uniquement un esprit",
-      "Indifférent à toute loi",
+      "Uniquement un animal parmi d'autres, déterminé par ses instincts",
+      "Uniquement un esprit pur, entièrement affranchi du monde sensible",
+      "Indifférent à toute loi, ni naturelle ni morale, livré au hasard",
     ],
     correct: 0,
     explanation:
@@ -121,9 +121,9 @@ export const natureQuestions: RawQuestion[] = [
       "La distinction entre nature et culture est rendue problématique par le fait que :",
     answers: [
       "L'interdit de l'inceste (Lévi-Strauss) est à la fois universel (nature) et règle variable (culture)",
-      "La culture n'existe pas",
-      "La nature est entièrement artificielle",
-      "Les deux sont identiques",
+      "La culture n'existe pas indépendamment des lois biologiques de l'espèce",
+      "La nature est entièrement façonnée par les pratiques humaines successives",
+      "Les deux concepts se révèlent strictement synonymes dans toutes les langues",
     ],
     correct: 0,
     explanation:
@@ -134,9 +134,9 @@ export const natureQuestions: RawQuestion[] = [
       "Spinoza identifie « Dieu » et la « Nature » (Deus sive Natura) : c'est une position :",
     answers: [
       "Panthéiste : la Nature est l'unique substance infinie, productrice de tout",
-      "Athée au sens vulgaire",
-      "Créationniste",
-      "Dualiste",
+      "Athée au sens strict : Spinoza nie toute réalité divine ou spirituelle",
+      "Créationniste : Dieu a librement créé la nature puis s'en est retiré",
+      "Dualiste : Dieu et la Nature forment deux substances entièrement séparées",
     ],
     correct: 0,
     explanation:
@@ -147,9 +147,9 @@ export const natureQuestions: RawQuestion[] = [
       "La crise écologique conduit certains (Hans Jonas) à formuler un nouveau principe :",
     answers: [
       "Le principe responsabilité : agir en préservant les conditions de vie des générations futures",
-      "Le droit de tout exploiter sans limite",
-      "L'indifférence à l'avenir",
-      "Le retour à l'âge de pierre obligatoire",
+      "Le droit d'exploiter la nature sans limite au nom du progrès humain",
+      "L'indifférence à l'avenir, seul le présent ayant une valeur morale réelle",
+      "Le retour obligatoire à une société préindustrielle et agraire",
     ],
     correct: 0,
     explanation:
@@ -160,9 +160,9 @@ export const natureQuestions: RawQuestion[] = [
       "Le « naturel » est souvent invoqué comme norme (« c'est contre nature ») ; le risque est :",
     answers: [
       "De confondre ce qui est (un fait) et ce qui doit être (une valeur)",
-      "De trop respecter la science",
-      "D'être trop logique",
-      "De nier l'existence des faits",
+      "De trop respecter les découvertes de la biologie et de l'écologie",
+      "D'appliquer un raisonnement trop rigoureux là où l'intuition suffit",
+      "De nier l'existence même des faits au profit des seules normes sociales",
     ],
     correct: 0,
     explanation:
@@ -173,9 +173,9 @@ export const natureQuestions: RawQuestion[] = [
       "Pour les stoïciens, « vivre conformément à la nature » signifie :",
     answers: [
       "Vivre selon la raison, qui est l'ordre rationnel du cosmos",
-      "Suivre tous ses instincts",
-      "Retourner vivre en forêt",
-      "Renoncer à penser",
+      "Suivre tous ses instincts et désirs sans les soumettre à la réflexion",
+      "Quitter la ville pour s'installer dans une forêt ou à la campagne",
+      "Renoncer à penser afin de ne plus résister au cours des choses",
     ],
     correct: 0,
     explanation:
@@ -186,9 +186,9 @@ export const natureQuestions: RawQuestion[] = [
       "L'opposition entre une nature « providence » et une nature « marâtre » illustre :",
     answers: [
       "Le débat sur la finalité : la nature est-elle bienveillante et ordonnée, ou indifférente et aveugle ?",
-      "Une question de géographie",
-      "Un problème mathématique",
-      "Une loi physique",
+      "Une simple question de géographie entre régions fertiles et régions arides",
+      "Un problème de calcul mathématique sur la distribution des ressources naturelles",
+      "Une loi physique décrivant l'alternance des cycles climatiques saisonniers",
     ],
     correct: 0,
     explanation:

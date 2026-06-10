@@ -4,7 +4,12 @@ export const inconscientQuestions: RawQuestion[] = [
   {
     question:
       "L'hypothèse de l'inconscient psychique est principalement développée par :",
-    answers: ["Sigmund Freud", "Descartes", "Aristote", "Kant"],
+    answers: [
+      "Sigmund Freud, fondateur de la psychanalyse",
+      "René Descartes, philosophe du cogito",
+      "Aristote, philosophe de l'âme",
+      "Emmanuel Kant, philosophe critique",
+    ],
     correct: 0,
     explanation:
       "Freud fonde la psychanalyse en posant l'existence d'un psychisme inconscient, distinct de la simple absence de conscience.",
@@ -14,9 +19,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "Selon Freud, l'inconscient se manifeste notamment à travers :",
     answers: [
       "Les rêves, les lapsus, les actes manqués et les symptômes",
-      "Les seuls raisonnements logiques",
-      "La volonté consciente",
-      "Les perceptions claires et distinctes",
+      "Les seuls raisonnements logiques et délibérés",
+      "La volonté consciente et les décisions réfléchies",
+      "Les perceptions claires, distinctes et maîtrisées",
     ],
     correct: 0,
     explanation:
@@ -27,9 +32,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "La « deuxième topique » de Freud distingue trois instances :",
     answers: [
       "Le Ça, le Moi et le Surmoi",
-      "Le conscient, le préconscient, l'inconscient",
-      "Le corps, l'âme, l'esprit",
-      "La raison, le cœur, la volonté",
+      "Le conscient, le préconscient et l'inconscient",
+      "Le corps, l'âme et l'esprit",
+      "La raison, le cœur et la volonté",
     ],
     correct: 0,
     explanation:
@@ -39,9 +44,9 @@ export const inconscientQuestions: RawQuestion[] = [
     question: "Le « Ça » désigne, dans la deuxième topique :",
     answers: [
       "Le réservoir des pulsions, régi par le principe de plaisir",
-      "L'instance morale des interdits",
-      "La conscience réfléchie",
-      "La perception du monde extérieur",
+      "L'instance morale héritière des interdits parentaux",
+      "La conscience réfléchie qui arbitre avec la réalité",
+      "La perception volontaire du monde extérieur",
     ],
     correct: 0,
     explanation:
@@ -51,9 +56,9 @@ export const inconscientQuestions: RawQuestion[] = [
     question: "Le « Surmoi » correspond à :",
     answers: [
       "L'instance morale, héritière des interdits parentaux et sociaux intériorisés",
-      "Le réservoir des pulsions",
-      "Le principe de plaisir",
-      "La simple sensation",
+      "Le réservoir des pulsions régi par le principe de plaisir",
+      "Le principe de plaisir cherchant la satisfaction immédiate",
+      "La simple sensation corporelle sans dimension morale",
     ],
     correct: 0,
     explanation:
@@ -63,9 +68,9 @@ export const inconscientQuestions: RawQuestion[] = [
     question: "Le « refoulement » désigne le mécanisme par lequel :",
     answers: [
       "Des représentations désagréables sont maintenues hors de la conscience",
-      "On oublie naturellement sans cause",
-      "On guérit instantanément",
-      "On devient pleinement conscient de tout",
+      "On oublie naturellement des faits sans raison particulière",
+      "On guérit instantanément d'un conflit psychique",
+      "On prend pleinement conscience de tous ses désirs",
     ],
     correct: 0,
     explanation:
@@ -76,9 +81,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "« Le moi n'est pas maître dans sa propre maison » exprime, chez Freud :",
     answers: [
       "La « blessure narcissique » : la conscience ne gouverne pas toute la vie psychique",
-      "La toute-puissance de la conscience",
-      "L'inexistence de l'inconscient",
-      "La supériorité de la raison pure",
+      "La toute-puissance de la conscience sur les pulsions inconscientes",
+      "L'inexistence de l'inconscient dans le fonctionnement psychique",
+      "La supériorité de la raison pure sur les désirs du corps",
     ],
     correct: 0,
     explanation:
@@ -88,9 +93,9 @@ export const inconscientQuestions: RawQuestion[] = [
     question: "Le « principe de plaisir » s'oppose, chez Freud, au :",
     answers: [
       "Principe de réalité, qui diffère ou aménage la satisfaction selon le monde extérieur",
-      "Principe de raison suffisante",
-      "Principe d'identité",
-      "Principe de non-contradiction",
+      "Principe de raison suffisante, postulant une cause à tout événement",
+      "Principe d'identité, affirmant qu'une chose est égale à elle-même",
+      "Principe de non-contradiction, fondement de la logique formelle",
     ],
     correct: 0,
     explanation:
@@ -101,9 +106,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "Une objection classique (Alain, Sartre) à l'inconscient freudien est que :",
     answers: [
       "Il déresponsabilise le sujet, qui pourrait s'en servir comme alibi (mauvaise foi)",
-      "Il rend l'homme trop libre",
-      "Il est trop optimiste",
-      "Il nie l'existence des rêves",
+      "Il rend l'homme trop libre en supprimant toute contrainte psychique",
+      "Il est trop optimiste sur la capacité humaine à se connaître",
+      "Il nie complètement l'existence des rêves et des actes manqués",
     ],
     correct: 0,
     explanation:
@@ -113,10 +118,10 @@ export const inconscientQuestions: RawQuestion[] = [
     question:
       "Avant Freud, l'idée d'une vie psychique non consciente apparaît déjà chez :",
     answers: [
-      "Leibniz, avec ses « petites perceptions »",
-      "Descartes seul",
-      "Épicure",
-      "Saint Augustin uniquement",
+      "Leibniz, avec ses « petites perceptions » imperceptibles",
+      "Descartes, avec son cogito et la transparence du sujet pensant",
+      "Épicure, avec sa doctrine du plaisir et de l'ataraxie",
+      "Saint Augustin, avec sa méditation sur la grâce divine",
     ],
     correct: 0,
     explanation:
@@ -126,9 +131,9 @@ export const inconscientQuestions: RawQuestion[] = [
     question: "La « sublimation » désigne :",
     answers: [
       "La dérivation d'une pulsion vers un but socialement valorisé (art, science)",
-      "Le refoulement total d'un désir",
-      "La satisfaction immédiate de la pulsion",
-      "La disparition de toute pulsion",
+      "Le refoulement complet et durable d'un désir inacceptable",
+      "La satisfaction immédiate de la pulsion sans détour social",
+      "La disparition définitive de toute pulsion chez le sujet adulte",
     ],
     correct: 0,
     explanation:
@@ -138,10 +143,10 @@ export const inconscientQuestions: RawQuestion[] = [
     question:
       "La méthode thérapeutique inventée par Freud pour atteindre l'inconscient est :",
     answers: [
-      "Les libres associations et l'analyse des rêves",
-      "L'hypnose seule, définitivement",
-      "La pure introspection rationnelle",
-      "La méditation transcendantale",
+      "Les libres associations et l'analyse des rêves en séance",
+      "L'hypnose seule, sans parole ni interprétation du thérapeute",
+      "La pure introspection rationnelle pratiquée en solitaire",
+      "La méditation transcendantale visant le silence intérieur",
     ],
     correct: 0,
     explanation:
@@ -151,10 +156,10 @@ export const inconscientQuestions: RawQuestion[] = [
     question:
       "Pour Freud, le rêve est, sous sa déformation apparente :",
     answers: [
-      "L'accomplissement (déguisé) d'un désir refoulé",
-      "Un pur hasard sans signification",
-      "Une prédiction de l'avenir",
-      "Un simple résidu de la digestion",
+      "L'accomplissement déguisé d'un désir inconscient refoulé",
+      "Un pur hasard neuronal sans signification psychique",
+      "Une prédiction symbolique de l'avenir du rêveur",
+      "Un simple résidu physiologique lié à la digestion nocturne",
     ],
     correct: 0,
     explanation:
@@ -165,9 +170,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "Affirmer l'existence de l'inconscient revient surtout à contester l'idée que :",
     answers: [
       "Le psychisme se réduit à la conscience (« toute pensée est consciente »)",
-      "L'homme possède une raison",
-      "Les rêves existent",
-      "Le corps influence l'esprit",
+      "L'homme possède une raison capable de délibérer et de juger",
+      "Les rêves existent comme expérience vécue pendant le sommeil",
+      "Le corps exerce une influence quelconque sur la vie mentale",
     ],
     correct: 0,
     explanation:
@@ -178,9 +183,9 @@ export const inconscientQuestions: RawQuestion[] = [
       "La cure psychanalytique vise, selon Freud, à :",
     answers: [
       "Rendre conscient l'inconscient pour défaire l'emprise du refoulé",
-      "Supprimer toute pensée",
-      "Renforcer le refoulement",
-      "Effacer la mémoire du patient",
+      "Supprimer toute pensée perturbatrice par la volonté consciente",
+      "Renforcer le refoulement afin de stabiliser la vie psychique",
+      "Effacer la mémoire douloureuse du patient par suggestion directe",
     ],
     correct: 0,
     explanation:

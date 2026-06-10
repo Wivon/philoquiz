@@ -4,7 +4,7 @@ export const tempsQuestions: RawQuestion[] = [
   {
     question:
       "La célèbre méditation sur le temps « Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si on me le demande, je ne sais plus » est de :",
-    answers: ["Saint Augustin", "Aristote", "Bergson", "Kant"],
+    answers: ["Saint Augustin", "Aristote de Stagire", "Henri Bergson", "Emmanuel Kant"],
     correct: 0,
     explanation:
       "Dans les Confessions (livre XI), Augustin montre le paradoxe du temps : familier dans l'expérience, il devient insaisissable dès qu'on cherche à le définir.",
@@ -14,9 +14,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Pour Augustin, le temps existe surtout dans :",
     answers: [
       "L'âme : présent du passé (mémoire), présent du présent (attention), présent de l'avenir (attente)",
-      "Les objets matériels seuls",
-      "Le ciel des étoiles",
-      "Le néant pur",
+      "Les objets matériels, qui conservent la trace des événements passés",
+      "Le mouvement des astres, mesure extérieure et objective des durées",
+      "La nature physique, indépendamment de toute conscience humaine",
     ],
     correct: 0,
     explanation:
@@ -27,9 +27,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Pour Aristote, le temps est :",
     answers: [
       "« Le nombre du mouvement selon l'antérieur et le postérieur »",
-      "Une pure illusion",
-      "Indépendant de tout changement",
-      "Une substance matérielle",
+      "Une pure illusion que la raison doit dissoudre par l'analyse",
+      "Une substance immuable, indépendante de tout changement physique",
+      "Une forme a priori de l'esprit, antérieure à toute expérience sensible",
     ],
     correct: 0,
     explanation:
@@ -40,9 +40,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Bergson distingue le temps des horloges et la « durée » : la durée est :",
     answers: [
       "Le temps vécu et qualitatif, où les états se fondent et se prolongent les uns dans les autres",
-      "Le temps mesuré, divisible et homogène",
-      "Une suite d'instants identiques",
-      "Le temps de la physique seul",
+      "Le temps mesuré et divisible, découpé en instants homogènes par les horloges",
+      "Une suite d'instants identiques et séparables, additionnables comme des nombres",
+      "Le temps de la physique newtonienne, uniforme et indépendant de l'observateur",
     ],
     correct: 0,
     explanation:
@@ -53,9 +53,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Pour Kant, le temps est :",
     answers: [
       "Une forme a priori de la sensibilité : la condition de toute expérience, non une chose en soi",
-      "Une réalité indépendante de l'esprit",
-      "Une simple illusion sans rôle",
-      "Une catégorie de l'entendement comme la cause",
+      "Une réalité indépendante de l'esprit, qui existe en dehors de toute perception",
+      "Une simple illusion subjective, sans rôle structurant pour la connaissance",
+      "Une catégorie de l'entendement, comme la causalité ou la substance",
     ],
     correct: 0,
     explanation:
@@ -66,9 +66,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Le « carpe diem » d'Horace invite à :",
     answers: [
       "Cueillir le jour présent, sans trop compter sur un avenir incertain",
-      "Sacrifier le présent à l'avenir",
-      "Ne penser qu'au passé",
-      "Renoncer à tout plaisir",
+      "Sacrifier le présent au profit d'un avenir soigneusement planifié",
+      "Méditer sur le passé pour en tirer les leçons nécessaires à la sagesse",
+      "Renoncer aux plaisirs immédiats pour atteindre une vertu durable",
     ],
     correct: 0,
     explanation:
@@ -79,9 +79,9 @@ export const tempsQuestions: RawQuestion[] = [
       "La fuite du temps (le « tempus fugit ») rend l'existence humaine :",
     answers: [
       "Marquée par la finitude : l'homme est un être pour la mort, conscient de sa durée limitée",
-      "Éternelle",
-      "Indifférente au temps",
-      "Sans aucun rapport à la mort",
+      "Éternelle dans son essence, la mort n'étant qu'une apparence trompeuse",
+      "Indifférente au temps, capable de s'abstraire de sa condition mortelle",
+      "Purement animale, sans que la conscience du temps y joue aucun rôle propre",
     ],
     correct: 0,
     explanation:
@@ -91,10 +91,10 @@ export const tempsQuestions: RawQuestion[] = [
     question:
       "Pour les stoïciens, face au temps, la sagesse consiste à :",
     answers: [
-      "Se concentrer sur le présent, seul moment qui dépend de nous",
-      "Regretter sans cesse le passé",
-      "Craindre constamment l'avenir",
-      "Nier le présent",
+      "Se concentrer sur le présent, seul moment qui dépend vraiment de nous",
+      "Regretter sans cesse le passé et chercher à le revivre par la mémoire",
+      "Craindre constamment l'avenir et s'y préparer par l'anxiété vigilante",
+      "Nier le présent pour se projeter vers un futur idéal et parfait",
     ],
     correct: 0,
     explanation:
@@ -103,7 +103,7 @@ export const tempsQuestions: RawQuestion[] = [
   {
     question:
       "L'idée d'un « éternel retour » du même est développée par :",
-    answers: ["Nietzsche", "Descartes", "Locke", "Comte"],
+    answers: ["Friedrich Nietzsche", "René Descartes", "John Locke", "Auguste Comte"],
     correct: 0,
     explanation:
       "Nietzsche propose l'épreuve de l'éternel retour : aimerais-tu revivre éternellement ta vie à l'identique ? C'est un test de l'amour de la vie (amor fati).",
@@ -113,9 +113,9 @@ export const tempsQuestions: RawQuestion[] = [
       "La distinction entre le temps objectif (physique) et le temps subjectif (vécu) montre que :",
     answers: [
       "Une même durée mesurée peut sembler longue ou brève selon l'état de la conscience",
-      "Le temps est toujours ressenti de façon identique",
-      "Le temps n'a aucune dimension subjective",
-      "La physique étudie le temps vécu",
+      "Le temps est toujours ressenti de façon identique, quelle que soit la situation",
+      "Le temps vécu ne possède aucune dimension subjective mesurable ou pertinente",
+      "La physique étudie le temps intérieur mieux que la psychologie ou la phénoménologie",
     ],
     correct: 0,
     explanation:
@@ -125,10 +125,10 @@ export const tempsQuestions: RawQuestion[] = [
     question:
       "La mémoire, selon Bergson, joue dans le rapport au temps le rôle de :",
     answers: [
-      "Conserver le passé qui se prolonge dans le présent et oriente l'action",
-      "Effacer toute trace du passé",
-      "Figer l'instant présent",
-      "Supprimer l'avenir",
+      "Conserver le passé qui se prolonge dans le présent et oriente ainsi l'action",
+      "Effacer toute trace du passé pour libérer la conscience du poids des souvenirs",
+      "Figer l'instant présent en une image immobile et détachée du flux temporel",
+      "Supprimer l'avenir en ramenant sans cesse la conscience vers les événements révolus",
     ],
     correct: 0,
     explanation:
@@ -139,9 +139,9 @@ export const tempsQuestions: RawQuestion[] = [
       "Le projet (Sartre, Heidegger) montre que l'homme se rapporte au temps en :",
     answers: [
       "Se devançant vers l'avenir : il existe en se projetant dans ce qu'il n'est pas encore",
-      "Vivant seulement dans le passé",
-      "Ignorant l'avenir",
-      "Restant immobile dans l'instant",
+      "Vivant seulement dans le passé, défini par ce qu'il a déjà été et accompli",
+      "Ignorant l'avenir pour se concentrer uniquement sur les données du présent",
+      "Restant immobile dans l'instant, sans pouvoir se projeter au-delà de lui-même",
     ],
     correct: 0,
     explanation:
@@ -152,9 +152,9 @@ export const tempsQuestions: RawQuestion[] = [
       "La question « le temps existe-t-il indépendamment de l'esprit ? » oppose :",
     answers: [
       "Une conception réaliste (le temps est dans les choses) et idéaliste (le temps est dans l'esprit)",
-      "Deux thèses identiques",
-      "La physique et la chimie",
-      "Le passé et le présent",
+      "Deux thèses qui disent au fond la même chose, malgré leurs différences de formulation",
+      "La physique et la chimie, disciplines qui mesurent le temps de façon incompatible",
+      "Le passé et le présent, qui n'entretiennent selon ces penseurs aucun rapport direct",
     ],
     correct: 0,
     explanation:
@@ -165,9 +165,9 @@ export const tempsQuestions: RawQuestion[] = [
       "L'« instant » se distingue de la durée parce qu'il est :",
     answers: [
       "Un point sans épaisseur, limite entre passé et futur, plutôt qu'un moment vécu étendu",
-      "Une longue période",
-      "Identique à l'éternité",
-      "Le temps des horloges",
+      "Une longue période continue, plus étendue que n'importe quelle durée ordinaire",
+      "Identique à l'éternité, car il échappe au flux du temps comme elle",
+      "Le seul temps que mesurent réellement les horloges dans leur fonctionnement",
     ],
     correct: 0,
     explanation:
@@ -178,9 +178,9 @@ export const tempsQuestions: RawQuestion[] = [
       "L'idée que « l'histoire a un sens » (progrès, fin) suppose une conception du temps :",
     answers: [
       "Linéaire et orientée, par opposition au temps cyclique des Anciens",
-      "Purement circulaire",
-      "Immobile",
-      "Sans aucune direction",
+      "Purement circulaire, où les mêmes événements se répètent indéfiniment",
+      "Immobile et éternelle, hors de toute succession ou changement réel",
+      "Sans aucune direction ni télos, réduite à une pure succession aléatoire",
     ],
     correct: 0,
     explanation:

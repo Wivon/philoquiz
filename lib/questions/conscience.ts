@@ -5,9 +5,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "L'étymologie de « conscience » (cum scientia) signifie :",
     answers: [
       "« Avec savoir » : un savoir qui accompagne nos actes et nos états",
-      "« Sans savoir »",
-      "« Contre la science »",
-      "« Science exacte »",
+      "« Sans savoir » : une ignorance fondamentale de soi-même",
+      "« Contre la science » : un refus du savoir rationnel",
+      "« Science exacte » : une connaissance certifiée et vérifiable",
     ],
     correct: 0,
     explanation:
@@ -17,9 +17,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Le cogito de Descartes (« je pense, donc je suis ») établit :",
     answers: [
       "La conscience de soi comme première certitude indubitable",
-      "L'existence du monde extérieur",
-      "L'existence de Dieu en premier",
-      "Que le corps pense",
+      "L'existence du monde extérieur comme certitude première",
+      "L'existence de Dieu avant toute autre vérité",
+      "Que le corps pense indépendamment de l'âme",
     ],
     correct: 0,
     explanation:
@@ -29,9 +29,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Pour Husserl, la conscience est toujours :",
     answers: [
       "Intentionnelle : « toute conscience est conscience de quelque chose »",
-      "Vide de tout contenu",
-      "Inconsciente",
-      "Une chose matérielle",
+      "Vide de tout contenu, pure forme sans relation au monde",
+      "Inconsciente dans ses mécanismes les plus profonds",
+      "Une chose matérielle soumise aux lois physiques",
     ],
     correct: 0,
     explanation:
@@ -42,9 +42,9 @@ export const conscienceQuestions: RawQuestion[] = [
       "Distinguer conscience immédiate (spontanée) et conscience réfléchie, c'est opposer :",
     answers: [
       "Le vécu qui accompagne l'acte et le retour de la pensée sur elle-même",
-      "Deux choses strictement identiques",
-      "Une conscience animale et une conscience divine",
-      "Une conscience vraie et une fausse",
+      "Deux formes de conscience strictement identiques en nature",
+      "Une conscience animale et une conscience proprement divine",
+      "Une conscience vraie infaillible et une conscience fausse illusoire",
     ],
     correct: 0,
     explanation:
@@ -55,9 +55,9 @@ export const conscienceQuestions: RawQuestion[] = [
       "Selon Sartre, la conscience de soi implique que l'homme :",
     answers: [
       "Est libre : « condamné à être libre », sans essence fixée d'avance",
-      "Est déterminé par sa nature",
-      "Est une chose parmi les choses",
-      "Est incapable de choisir",
+      "Est déterminé par sa nature biologique et son passé",
+      "Est une chose parmi les autres choses du monde",
+      "Est incapable de choisir sans l'aide d'une loi morale extérieure",
     ],
     correct: 0,
     explanation:
@@ -67,9 +67,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "La « mauvaise foi », chez Sartre, désigne :",
     answers: [
       "Se mentir à soi-même pour fuir sa liberté et sa responsabilité",
-      "Le mensonge fait à autrui",
-      "L'athéisme",
-      "Une croyance religieuse",
+      "Mentir délibérément à autrui pour en tirer un avantage",
+      "Nier l'existence de Dieu avec pleine connaissance de cause",
+      "Adopter une croyance religieuse sans en examiner les fondements",
     ],
     correct: 0,
     explanation:
@@ -79,9 +79,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Pour Locke, l'identité personnelle repose sur :",
     answers: [
       "La conscience et la mémoire qui relient nos états présents et passés",
-      "Le corps seul",
-      "Une âme immatérielle indépendante de toute mémoire",
-      "Le nom propre",
+      "Le corps seul, dont la continuité physique assure l'identité",
+      "Une âme immatérielle indépendante de toute mémoire ou expérience",
+      "Le nom propre attribué à la naissance par la société",
     ],
     correct: 0,
     explanation:
@@ -91,9 +91,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Le « sujet » désigne, en philosophie de la conscience :",
     answers: [
       "Le support des pensées et des actes, le « je » qui dit « je pense »",
-      "Le thème d'une dissertation",
-      "Un citoyen soumis au roi",
-      "Un simple objet",
+      "Le thème d'une dissertation ou d'un exercice philosophique",
+      "Un citoyen soumis à l'autorité d'un roi ou d'un État",
+      "Un simple objet passif de l'expérience scientifique",
     ],
     correct: 0,
     explanation:
@@ -104,9 +104,9 @@ export const conscienceQuestions: RawQuestion[] = [
       "« L'homme n'est qu'un roseau, le plus faible de la nature ; mais c'est un roseau pensant » (Pascal) souligne que :",
     answers: [
       "La dignité de l'homme tient à la pensée et à la conscience, non à la force",
-      "L'homme est invincible",
-      "La nature est pensante",
-      "La pensée est inutile",
+      "L'homme est invincible grâce à sa supériorité physique sur la nature",
+      "La nature tout entière possède une forme de conscience ou de pensée",
+      "La pensée est inutile face aux forces aveugles de l'univers",
     ],
     correct: 0,
     explanation:
@@ -116,9 +116,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Pour Hegel, la conscience de soi se conquiert par :",
     answers: [
       "La reconnaissance d'autrui (dialectique du maître et de l'esclave)",
-      "La solitude absolue",
-      "La simple sensation",
-      "L'instinct",
+      "La solitude absolue et le repli sur sa vie intérieure",
+      "La simple sensation corporelle et le plaisir immédiat",
+      "L'instinct naturel qui guide l'animal comme l'être humain",
     ],
     correct: 0,
     explanation:
@@ -128,9 +128,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Nietzsche soutient que la conscience est :",
     answers: [
       "Tardive et superficielle, née du besoin de communiquer ; l'essentiel se joue ailleurs",
-      "Le fond même de l'être humain",
-      "Infaillible",
-      "D'origine divine",
+      "Le fond même de l'être humain, source de toute vie et de tout sens",
+      "Infaillible dans ses jugements sur le monde et sur soi-même",
+      "D'origine divine, accordée à l'homme pour le distinguer de l'animal",
     ],
     correct: 0,
     explanation:
@@ -140,9 +140,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "La conscience morale désigne :",
     answers: [
       "La capacité de juger le bien et le mal de ses actes (la voix qui approuve ou blâme)",
-      "La simple perception sensorielle",
-      "La seule conscience de soi théorique",
-      "Le savoir scientifique",
+      "La simple perception sensorielle du monde extérieur et de ses objets",
+      "La seule conscience théorique de soi, sans rapport à l'action",
+      "Le savoir scientifique permettant de comprendre les lois de la nature",
     ],
     correct: 0,
     explanation:
@@ -153,9 +153,9 @@ export const conscienceQuestions: RawQuestion[] = [
       "L'objection majeure à la transparence de la conscience vient de :",
     answers: [
       "Freud et l'hypothèse de l'inconscient : la conscience ne se connaît pas pleinement",
-      "Descartes",
-      "Husserl",
-      "Aristote",
+      "Descartes, qui affirme que le doute rend toute certitude impossible",
+      "Husserl, pour qui l'intentionnalité brouille le rapport à soi",
+      "Aristote, qui réduisait l'âme à la simple forme du corps vivant",
     ],
     correct: 0,
     explanation:
@@ -165,10 +165,10 @@ export const conscienceQuestions: RawQuestion[] = [
     question:
       "Kant nomme « Je pense » qui peut accompagner toutes mes représentations :",
     answers: [
-      "L'aperception transcendantale, unité du sujet de la connaissance",
-      "L'inconscient",
-      "La sensation pure",
-      "L'imagination reproductrice",
+      "L'aperception transcendantale, unité formelle du sujet connaissant",
+      "L'inconscient dynamique, siège des désirs refoulés et cachés",
+      "La sensation pure, donnée brute avant toute mise en forme",
+      "L'imagination reproductrice, qui associe les images entre elles",
     ],
     correct: 0,
     explanation:
@@ -178,9 +178,9 @@ export const conscienceQuestions: RawQuestion[] = [
     question: "Selon Bergson, la conscience est avant tout liée à :",
     answers: [
       "La mémoire et l'anticipation : « conscience signifie d'abord mémoire »",
-      "L'oubli total",
-      "L'instant présent isolé",
-      "La matière inerte",
+      "L'oubli total du passé, condition d'une attention au présent pur",
+      "L'instant présent isolé, coupé de tout souvenir et de tout projet",
+      "La matière inerte, dont elle ne serait qu'une propriété émergente",
     ],
     correct: 0,
     explanation:

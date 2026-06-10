@@ -5,10 +5,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "Pour Kant, une action a une valeur morale lorsqu'elle est accomplie :",
     answers: [
-      "Par devoir (par respect de la loi morale), et non seulement conformément au devoir",
-      "Par intérêt personnel",
-      "Par inclination ou sympathie",
-      "Par crainte du châtiment",
+      "Par devoir, par pur respect de la loi morale, et non seulement en accord avec elle",
+      "Par intérêt personnel bien compris et calcul des conséquences",
+      "Par inclination naturelle ou sympathie envers autrui",
+      "Par crainte du châtiment légal ou du regard social",
     ],
     correct: 0,
     explanation:
@@ -17,10 +17,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "L'impératif catégorique kantien commande :",
     answers: [
-      "Inconditionnellement (« tu dois »), indépendamment de tout but",
-      "Sous condition d'un but (« si tu veux X, fais Y »)",
-      "Seulement aux croyants",
-      "De rechercher le bonheur",
+      "Inconditionnellement, indépendamment de tout but ou désir personnel",
+      "Sous condition d'un but précis : « si tu veux X, alors fais Y »",
+      "Seulement aux croyants qui reconnaissent une loi divine supérieure",
+      "De rechercher le bonheur personnel comme finalité suprême",
     ],
     correct: 0,
     explanation:
@@ -30,9 +30,9 @@ export const devoirQuestions: RawQuestion[] = [
     question: "Une formulation de l'impératif catégorique est :",
     answers: [
       "« Agis seulement d'après la maxime que tu peux vouloir ériger en loi universelle »",
-      "« Agis toujours selon ton intérêt »",
-      "« Rends aux autres ce qu'ils te font »",
-      "« Recherche le plus grand plaisir »",
+      "« Agis toujours de façon à maximiser ton intérêt propre à long terme »",
+      "« Rends aux autres exactement ce qu'ils te font, ni plus ni moins »",
+      "« Recherche le plus grand plaisir possible pour le plus grand nombre »",
     ],
     correct: 0,
     explanation:
@@ -42,10 +42,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "L'impératif hypothétique se distingue de l'impératif catégorique car il est :",
     answers: [
-      "Conditionnel, soumis à une fin (« si tu veux réussir, travaille »)",
-      "Inconditionnel",
-      "Toujours moral",
-      "Réservé à Dieu",
+      "Conditionnel, soumis à une fin choisie : « si tu veux réussir, travaille »",
+      "Inconditionnel et valable pour tout être raisonnable sans exception",
+      "Toujours moral et fondé sur le pur respect de la loi pratique",
+      "Réservé à la divinité et inaccessible à la volonté humaine finie",
     ],
     correct: 0,
     explanation:
@@ -55,10 +55,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "La formule de l'humanité chez Kant : « Agis de telle sorte que tu traites l'humanité… »",
     answers: [
-      "« …toujours comme une fin, jamais simplement comme un moyen »",
-      "« …comme un moyen utile »",
-      "« …selon ton plaisir »",
-      "« …selon la loi de l'État »",
+      "« …toujours en même temps comme une fin, jamais simplement comme un moyen »",
+      "« …comme un moyen utile au service du bien commun et de l'État »",
+      "« …selon ton plaisir du moment, pourvu que tu n'enfreignes aucune loi »",
+      "« …selon la loi de l'État et les conventions de la société civile »",
     ],
     correct: 0,
     explanation:
@@ -67,10 +67,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "Pour Kant, la « bonne volonté » est :",
     answers: [
-      "La seule chose bonne sans restriction, indépendamment de ses résultats",
-      "La volonté de réussir socialement",
-      "Le talent naturel",
-      "La richesse",
+      "La seule chose bonne sans restriction, quels que soient ses résultats",
+      "La volonté ferme de réussir socialement et de s'imposer aux autres",
+      "Le talent naturel cultivé par l'éducation et l'exercice répété",
+      "La richesse accumulée honnêtement et utilisée pour le bien public",
     ],
     correct: 0,
     explanation:
@@ -80,10 +80,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "La morale conséquentialiste (utilitarisme de Bentham et Mill) juge une action :",
     answers: [
-      "D'après ses conséquences (le plus grand bonheur du plus grand nombre)",
-      "D'après l'intention seule",
-      "D'après la loi divine",
-      "D'après la tradition",
+      "D'après ses conséquences : maximiser le bonheur du plus grand nombre",
+      "D'après la seule intention du sujet, indépendamment des effets produits",
+      "D'après la conformité à la loi divine révélée dans les textes sacrés",
+      "D'après la tradition et les coutumes transmises par les générations passées",
     ],
     correct: 0,
     explanation:
@@ -92,10 +92,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "L'opposition classique des grandes morales oppose :",
     answers: [
-      "La déontologie (devoir, règles) et le conséquentialisme (résultats)",
-      "La logique et la rhétorique",
-      "La physique et la métaphysique",
-      "L'art et la technique",
+      "La déontologie (valeur des règles) et le conséquentialisme (valeur des résultats)",
+      "La logique formelle et la rhétorique persuasive dans le discours public",
+      "La physique newtonienne et la métaphysique des causes premières",
+      "L'art comme fin en soi et la technique comme pure production utilitaire",
     ],
     correct: 0,
     explanation:
@@ -104,10 +104,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "Le devoir se distingue de la simple contrainte car :",
     answers: [
-      "Le devoir est une obligation morale qu'on peut transgresser (donc suppose la liberté) ; la contrainte est une force subie",
-      "Les deux sont identiques",
-      "Le devoir est purement physique",
-      "La contrainte est morale",
+      "Le devoir oblige moralement une volonté libre ; la contrainte est une force physique subie",
+      "Le devoir et la contrainte sont identiques : toute obligation est une force extérieure",
+      "Le devoir est un phénomène purement physique, mesurable par les sciences naturelles",
+      "La contrainte est morale et intérieure ; le devoir est extérieur et légal",
     ],
     correct: 0,
     explanation:
@@ -116,10 +116,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "L'autonomie de la volonté, chez Kant, signifie :",
     answers: [
-      "Se donner à soi-même sa propre loi par la raison (auto-nomos)",
-      "Obéir à une loi entièrement extérieure",
-      "Faire tout ce qu'on veut",
-      "Suivre ses désirs",
+      "Se donner à soi-même sa propre loi par la raison, indépendamment de tout désir",
+      "Obéir à une loi entièrement extérieure, imposée par la religion ou la société",
+      "Faire exactement tout ce qu'on veut, sans contrainte d'aucune sorte",
+      "Suivre librement ses désirs et inclinations naturelles les plus profondes",
     ],
     correct: 0,
     explanation:
@@ -128,10 +128,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "L'hétéronomie de la volonté désigne au contraire :",
     answers: [
-      "Recevoir sa loi d'ailleurs (désirs, autorité, intérêt)",
-      "L'autonomie de la raison",
-      "La liberté absolue",
-      "La raison pure pratique",
+      "Recevoir sa loi d'ailleurs : désirs, autorité extérieure ou intérêt personnel",
+      "L'autonomie complète de la raison pratique qui se légifère elle-même",
+      "La liberté absolue du sujet affranchi de toute contrainte morale",
+      "La raison pure pratique agissant indépendamment de toute inclination",
     ],
     correct: 0,
     explanation:
@@ -141,10 +141,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "Selon Bergson (Les Deux Sources de la morale et de la religion), il existe :",
     answers: [
-      "Une morale close (pression sociale, obligation) et une morale ouverte (aspiration, amour)",
-      "Une seule morale, purement rationnelle",
-      "Une morale uniquement divine",
-      "Une morale sans aucune origine sociale",
+      "Une morale close (pression sociale, obligation) et une morale ouverte (aspiration, amour universel)",
+      "Une seule morale, purement rationnelle et valable pour tout être raisonnable",
+      "Une morale uniquement divine, inaccessible à la philosophie profane",
+      "Une morale sans aucune origine sociale, purement individuelle et spontanée",
     ],
     correct: 0,
     explanation:
@@ -154,10 +154,10 @@ export const devoirQuestions: RawQuestion[] = [
     question:
       "L'objection de Benjamin Constant à Kant (le « droit de mentir ») porte sur :",
     answers: [
-      "Le caractère absolu de l'interdit de mentir, même pour sauver une vie menacée",
-      "L'existence de Dieu",
-      "La nature du bonheur",
-      "La peine de mort",
+      "Le caractère absolu de l'interdit de mentir, même pour sauver une vie innocente",
+      "La question de l'existence de Dieu et du fondement religieux de la morale",
+      "La définition du bonheur et son rôle possible dans la loi morale kantienne",
+      "La légitimité de la peine de mort au regard de la dignité humaine",
     ],
     correct: 0,
     explanation:
@@ -166,10 +166,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "« Tu dois, donc tu peux » signifie chez Kant que :",
     answers: [
-      "Le devoir implique la liberté : on ne peut être obligé qu'à ce qu'on est capable de faire",
-      "Le devoir est impossible à accomplir",
-      "On doit tout ce qu'on peut",
-      "Le pouvoir prime sur le devoir",
+      "Le devoir implique nécessairement la liberté : on ne peut être obligé qu'à ce qu'on peut faire",
+      "Le devoir moral est impossible à accomplir pour un être fini et imparfait",
+      "On est moralement tenu de faire tout ce qui est physiquement dans notre pouvoir",
+      "Le pouvoir politique prime toujours sur le devoir moral en cas de conflit",
     ],
     correct: 0,
     explanation:
@@ -178,10 +178,10 @@ export const devoirQuestions: RawQuestion[] = [
   {
     question: "Le « respect », chez Kant, est :",
     answers: [
-      "Le seul sentiment moral, produit par la raison, éprouvé devant la loi morale",
-      "Une simple émotion sensible",
-      "De l'admiration esthétique",
-      "De la crainte devant un supérieur",
+      "Le seul sentiment moral authentique, produit par la raison devant la loi morale",
+      "Une simple émotion sensible suscitée par la beauté ou la grandeur naturelle",
+      "De l'admiration esthétique devant une œuvre d'art ou un sublime paysage",
+      "De la crainte éprouvée devant un supérieur hiérarchique ou une autorité sociale",
     ],
     correct: 0,
     explanation:

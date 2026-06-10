@@ -5,9 +5,9 @@ export const techniqueQuestions: RawQuestion[] = [
     question: "La technique peut se définir comme :",
     answers: [
       "L'ensemble des procédés et outils par lesquels l'homme transforme la nature pour ses fins",
-      "Une simple connaissance théorique",
-      "Un sentiment esthétique",
-      "Une croyance religieuse",
+      "Un ensemble de connaissances purement théoriques et contemplatives",
+      "Une disposition esthétique à percevoir la beauté dans le monde naturel",
+      "Un système de croyances transmis par la tradition religieuse",
     ],
     correct: 0,
     explanation:
@@ -18,9 +18,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "Selon le mythe de Prométhée (Platon, Protagoras), la technique compense :",
     answers: [
       "Le dénuement naturel de l'homme, dépourvu d'instincts et d'organes spécialisés",
-      "La supériorité physique de l'homme",
-      "L'absence de langage chez les animaux",
-      "La perfection de la nature humaine",
+      "La supériorité physique de l'homme sur tous les autres animaux",
+      "L'absence de langage et de communication chez les animaux",
+      "La perfection innée de la nature humaine héritée des dieux",
     ],
     correct: 0,
     explanation:
@@ -31,9 +31,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "Pour Bergson, l'homme est moins « Homo sapiens » qu'« Homo faber », c'est-à-dire :",
     answers: [
       "Un fabricant d'outils, l'intelligence étant d'abord faculté de fabriquer des objets artificiels",
-      "Un pur contemplatif",
-      "Un être uniquement religieux",
-      "Un animal sans intelligence",
+      "Un être contemplatif dont l'intelligence est tournée vers la vérité pure",
+      "Un animal social dont la raison est essentiellement tournée vers le religieux",
+      "Un être purement instinctif, dépourvu de toute forme d'intelligence réelle",
     ],
     correct: 0,
     explanation:
@@ -43,10 +43,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Le projet cartésien fait de la technique le moyen de :",
     answers: [
-      "Se rendre « comme maîtres et possesseurs de la nature » pour le bien des hommes",
-      "Renoncer à agir sur la nature",
-      "Adorer la nature",
-      "Fuir le monde",
+      "Se rendre « comme maîtres et possesseurs de la nature » pour améliorer la condition humaine",
+      "Renoncer à toute intervention sur la nature et accepter ses lois immuables",
+      "Développer une contemplation admirative de l'ordre naturel du monde",
+      "Se soustraire aux exigences du monde en se réfugiant dans la vie intérieure",
     ],
     correct: 0,
     explanation:
@@ -57,9 +57,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "L'aliénation par la machine (Marx) décrit le fait que :",
     answers: [
       "L'ouvrier, réduit à un rouage, est dépossédé du sens et du produit de son travail",
-      "La machine rend toujours libre",
-      "Le travail technique est sans effet sur l'homme",
-      "La technique supprime le travail",
+      "La machine émancipe toujours l'ouvrier en le libérant des tâches les plus pénibles",
+      "Le travail technique est sans incidence sur la conscience ou l'identité du travailleur",
+      "La technique industrielle supprime le travail humain au profit du loisir universel",
     ],
     correct: 0,
     explanation:
@@ -70,9 +70,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "Pour Heidegger (La Question de la technique), la technique moderne :",
     answers: [
       "Est un mode de dévoilement qui « arraisonne » la nature comme un simple fonds disponible (Gestell)",
-      "Est un simple ensemble d'outils neutres",
-      "N'a aucune dimension philosophique",
-      "Est identique à la technique artisanale",
+      "Est un ensemble d'outils purement neutres sans incidence sur notre rapport au monde",
+      "N'a aucune dimension philosophique et relève uniquement des sciences de l'ingénieur",
+      "Prolonge sans rupture la technique artisanale grecque dans sa façon de révéler le monde",
     ],
     correct: 0,
     explanation:
@@ -82,10 +82,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "L'idée que « la technique est neutre, seul son usage est bon ou mauvais » est :",
     answers: [
-      "Une thèse discutée : pour certains (Ellul, Heidegger), la technique impose sa propre logique au-delà des usages",
-      "Une certitude absolue indiscutable",
-      "Une thèse sans aucun défenseur",
-      "Un théorème mathématique",
+      "Une thèse discutée : pour Ellul et Heidegger, la technique impose sa propre logique au-delà des usages",
+      "Une vérité absolue et universellement admise par tous les philosophes de la technique",
+      "Une position sans aucun défenseur dans l'histoire de la philosophie occidentale",
+      "Un théorème mathématiquement démontrable à partir de principes logiques premiers",
     ],
     correct: 0,
     explanation:
@@ -96,9 +96,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "Le « système technicien » (Jacques Ellul) désigne :",
     answers: [
       "Un ensemble de techniques s'auto-développant selon sa propre logique d'efficacité, qui échappe au contrôle humain",
-      "Un simple atelier d'artisan",
-      "Un parti politique",
-      "Une école de pensée antique",
+      "Un atelier artisanal organisé selon des méthodes ancestrales de fabrication manuelle",
+      "Un mouvement politique fondé sur la promotion des nouvelles technologies dans la société",
+      "Une école philosophique antique qui valorisait les arts mécaniques au détriment des arts libéraux",
     ],
     correct: 0,
     explanation:
@@ -108,10 +108,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Distinguer la technique de l'art (au sens d'œuvre), c'est noter que la technique vise :",
     answers: [
-      "L'utilité et l'efficacité, là où l'œuvre d'art est une fin en soi",
-      "La beauté gratuite uniquement",
-      "Rien de précis",
-      "La destruction",
+      "L'utilité et l'efficacité, là où l'œuvre d'art est une fin en soi sans usage pratique",
+      "La beauté gratuite uniquement, sans jamais chercher à produire un résultat fonctionnel",
+      "Des objectifs indéfinis, contrairement à l'art qui vise toujours l'utilité sociale",
+      "La destruction et le dépassement du donné naturel, comme l'art dans sa dimension subversive",
     ],
     correct: 0,
     explanation:
@@ -121,10 +121,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Le progrès technique pose un problème de responsabilité car :",
     answers: [
-      "Sa puissance peut menacer l'humanité et la nature futures (Hans Jonas)",
-      "Il est toujours sans conséquence",
-      "Il ne concerne que le passé",
-      "Il est interdit par la loi",
+      "Sa puissance peut menacer l'humanité et les générations futures (Hans Jonas, « principe responsabilité »)",
+      "Il est toujours sans conséquences et ne modifie pas les conditions de vie sur la planète",
+      "Ses effets se limitent au passé et ne touchent jamais les générations qui viendront après nous",
+      "Son développement est strictement encadré par des lois qui empêchent tout dérapage majeur",
     ],
     correct: 0,
     explanation:
@@ -134,10 +134,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Gilbert Simondon invite à dépasser l'opposition entre culture et technique en :",
     answers: [
-      "Reconnaissant à l'objet technique un mode d'existence et une valeur de culture",
-      "Détruisant toutes les machines",
-      "Méprisant les techniciens",
-      "Refusant de penser la technique",
+      "Reconnaissant à l'objet technique un mode d'existence propre et une véritable valeur de culture",
+      "Proposant de détruire toutes les machines pour revenir à un état de nature originaire",
+      "Réduisant les techniciens au rang de simples exécutants sans apport intellectuel réel",
+      "Refusant de philosopher sur la technique, jugée trop triviale pour la réflexion sérieuse",
     ],
     correct: 0,
     explanation:
@@ -147,10 +147,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "« L'apprenti sorcier » illustre le risque que :",
     answers: [
-      "L'homme déclenche des processus techniques qu'il ne maîtrise plus",
-      "La technique soit trop lente",
-      "Les machines soient inutiles",
-      "Le progrès soit impossible",
+      "L'homme déclenche des processus techniques puissants qu'il ne peut plus contrôler ni arrêter",
+      "La technique progresse trop lentement pour répondre aux besoins urgents de la civilisation",
+      "Les machines soient fondamentalement inutiles et nuisent au développement humain",
+      "Tout progrès technique soit impossible sans une maîtrise parfaite des lois de la nature",
     ],
     correct: 0,
     explanation:
@@ -161,9 +161,9 @@ export const techniqueQuestions: RawQuestion[] = [
       "Le rapport entre science et technique au sens moderne est tel que :",
     answers: [
       "La technique applique la science, mais lui fournit aussi ses instruments : on parle de « technoscience »",
-      "Elles n'ont aucun rapport",
-      "La technique précède toujours la science",
-      "La science a remplacé la technique",
+      "La science et la technique sont deux domaines totalement indépendants sans aucune interaction",
+      "La technique a toujours précédé la science, laquelle ne fait que théoriser des savoir-faire déjà établis",
+      "La science théorique a entièrement absorbé et remplacé la technique dans le monde contemporain",
     ],
     correct: 0,
     explanation:
@@ -173,10 +173,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Affirmer que la technique « libère » l'homme, c'est souligner qu'elle :",
     answers: [
-      "Le décharge de tâches pénibles et augmente sa puissance d'agir",
-      "Le rend toujours esclave",
-      "Le coupe de toute liberté",
-      "Supprime tout loisir",
+      "Le décharge de tâches pénibles et augmente sa puissance d'agir sur le monde naturel",
+      "Le place inévitablement sous la domination de machines qui deviennent ses nouveaux maîtres",
+      "Le coupe de toute forme de liberté en le soumettant à une logique de rendement totale",
+      "Supprime tout loisir en imposant un rythme de production croissant et sans fin",
     ],
     correct: 0,
     explanation:
@@ -186,10 +186,10 @@ export const techniqueQuestions: RawQuestion[] = [
     question:
       "Le travail de l'artisan diffère de celui de l'ouvrier d'usine parce que l'artisan :",
     answers: [
-      "Maîtrise l'ensemble du processus et y met sa marque, là où l'ouvrier exécute une tâche parcellaire",
-      "Ne fabrique rien",
-      "Travaille sans aucun outil",
-      "Refuse la technique",
+      "Maîtrise l'ensemble du processus de fabrication et y met sa marque, là où l'ouvrier exécute une tâche parcellaire",
+      "Ne produit strictement rien de concret et se contente de superviser le travail des machines",
+      "Travaille exclusivement à mains nues, sans jamais recourir à un outil ou un instrument",
+      "Refuse en principe tout recours à la technique et revendique une création purement spontanée",
     ],
     correct: 0,
     explanation:

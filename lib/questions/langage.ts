@@ -6,9 +6,9 @@ export const langageQuestions: RawQuestion[] = [
       "Pour Descartes, ce qui distingue radicalement l'homme de l'animal-machine, c'est :",
     answers: [
       "Le langage : la capacité d'arranger des mots pour répondre à tout sens",
-      "La force physique",
-      "Le simple cri",
-      "La faculté de se nourrir",
+      "La force musculaire supérieure à celle des autres espèces animales",
+      "L'instinct de survie plus développé que chez n'importe quel animal",
+      "La faculté de se nourrir et de reproduire l'espèce de façon réfléchie",
     ],
     correct: 0,
     explanation:
@@ -19,9 +19,9 @@ export const langageQuestions: RawQuestion[] = [
       "Selon Saussure, le signe linguistique unit :",
     answers: [
       "Un signifiant (image acoustique) et un signifié (concept)",
-      "Un mot et la chose réelle elle-même",
-      "Deux sons sans signification",
-      "Une idée et une image visuelle uniquement",
+      "Un nom et la chose réelle à laquelle il renvoie directement",
+      "Deux sons distincts dont aucun ne porte de signification propre",
+      "Une idée abstraite et une image purement visuelle et iconique",
     ],
     correct: 0,
     explanation:
@@ -32,9 +32,9 @@ export const langageQuestions: RawQuestion[] = [
       "« L'arbitraire du signe » (Saussure) signifie que :",
     answers: [
       "Le lien entre le mot et le concept est conventionnel, non naturel",
-      "On peut changer le sens des mots à volonté seul",
-      "Les langues sont toutes identiques",
-      "Le langage est inutile",
+      "Chaque locuteur peut modifier à sa guise le sens de n'importe quel mot",
+      "Toutes les langues du monde partagent les mêmes sons fondamentaux",
+      "Le langage est superflu car la pensée peut se passer totalement des mots",
     ],
     correct: 0,
     explanation:
@@ -45,9 +45,9 @@ export const langageQuestions: RawQuestion[] = [
       "Bergson reproche au langage (mots généraux) de :",
     answers: [
       "Masquer la singularité et la nuance de nos états intérieurs",
-      "Être trop précis",
-      "Être purement individuel",
-      "Rendre la pensée impossible",
+      "Être trop précis pour rendre compte de la complexité du monde extérieur",
+      "Rester une affaire purement individuelle, incapable de toute communication",
+      "Bloquer entièrement la pensée en la réduisant à des formules toutes faites",
     ],
     correct: 0,
     explanation:
@@ -58,9 +58,9 @@ export const langageQuestions: RawQuestion[] = [
       "La thèse selon laquelle « le langage exprime la pensée » est contestée par l'idée que :",
     answers: [
       "C'est en parlant que la pensée se forme : pas de pensée achevée avant les mots",
-      "La pensée n'existe pas",
-      "Le langage est antérieur aux hommes",
-      "Penser et parler n'ont aucun rapport",
+      "La pensée n'existe pas réellement en dehors de ses manifestations corporelles",
+      "Le langage est bien plus ancien que l'espèce humaine elle-même",
+      "Penser et parler sont deux activités radicalement indépendantes l'une de l'autre",
     ],
     correct: 0,
     explanation:
@@ -70,10 +70,10 @@ export const langageQuestions: RawQuestion[] = [
     question:
       "Pour Hegel, donner un nom à une chose, c'est :",
     answers: [
-      "La saisir idéalement, la faire passer du sensible au concept (une forme de négation)",
-      "La détruire physiquement",
-      "La laisser inchangée",
-      "La rendre invisible",
+      "La saisir idéalement et la faire passer du sensible au concept (une forme de négation)",
+      "La faire disparaître du monde physique par un acte de volonté pure",
+      "La conserver exactement telle quelle dans son immédiateté sensible brute",
+      "La rendre invisible aux autres en lui ôtant toute réalité partageable",
     ],
     correct: 0,
     explanation:
@@ -83,9 +83,9 @@ export const langageQuestions: RawQuestion[] = [
     question: "La « performativité » du langage (Austin) désigne :",
     answers: [
       "Le fait que dire, c'est parfois faire (« je promets », « je déclare la séance ouverte »)",
-      "La vitesse de la parole",
-      "La beauté d'un discours",
-      "L'absence totale de sens",
+      "La rapidité et la fluidité avec lesquelles un orateur entraîne son auditoire",
+      "La qualité esthétique et la beauté formelle propres au discours littéraire",
+      "L'incapacité totale du langage à produire un sens stable et communicable",
     ],
     correct: 0,
     explanation:
@@ -96,9 +96,9 @@ export const langageQuestions: RawQuestion[] = [
       "La fonction du langage ne se réduit pas à communiquer ; elle est aussi :",
     answers: [
       "Expressive, poétique, et un moyen d'agir sur autrui",
-      "Uniquement de tromper",
-      "Seulement décorative",
-      "Inexistante",
+      "Exclusivement orientée vers la tromperie et la manipulation d'autrui",
+      "Purement ornementale, sans aucun effet sur la pensée ou le comportement",
+      "Entièrement inexistante dès lors qu'on dépasse le simple échange d'informations",
     ],
     correct: 0,
     explanation:
@@ -109,9 +109,9 @@ export const langageQuestions: RawQuestion[] = [
       "Pour Rousseau, l'origine du langage tient d'abord à :",
     answers: [
       "L'expression des passions, avant les besoins (« ce n'est ni la faim ni la soif »)",
-      "Le calcul mathématique",
-      "Le besoin de commercer",
-      "L'imitation des machines",
+      "La nécessité de coordonner le travail collectif et les échanges commerciaux",
+      "L'imitation des sons de la nature pour se repérer dans l'environnement",
+      "Le calcul rationnel visant à satisfaire les besoins vitaux les plus urgents",
     ],
     correct: 0,
     explanation:
@@ -122,9 +122,9 @@ export const langageQuestions: RawQuestion[] = [
       "Le langage peut être un instrument de pouvoir et de manipulation, ce que montre notamment :",
     answers: [
       "La rhétorique et la propagande (la « novlangue » d'Orwell)",
-      "La seule grammaire",
-      "Le silence",
-      "La logique formelle uniquement",
+      "L'étude grammaticale et l'apprentissage des règles de conjugaison à l'école",
+      "Le silence délibéré qui prive les autres de toute information utile",
+      "La logique formelle et les mathématiques, réduites à des symboles abstraits",
     ],
     correct: 0,
     explanation:
@@ -135,9 +135,9 @@ export const langageQuestions: RawQuestion[] = [
       "La distinction entre langue et parole (Saussure) oppose :",
     answers: [
       "Le système social et partagé (langue) et son usage individuel et concret (parole)",
-      "L'écrit et l'oral seulement",
-      "Le français et l'anglais",
-      "Le mot et la phrase",
+      "La langue écrite, fixée par les grammairiens, et la langue orale populaire",
+      "Le français académique et l'anglais international utilisé dans les sciences",
+      "Le mot isolé pris dans le dictionnaire et la phrase construite par le locuteur",
     ],
     correct: 0,
     explanation:
@@ -148,9 +148,9 @@ export const langageQuestions: RawQuestion[] = [
       "Wittgenstein (seconde philosophie) compare le sens d'un mot à :",
     answers: [
       "Son usage dans un « jeu de langage » réglé par des règles partagées",
-      "Une image mentale privée et incommunicable",
-      "Sa définition dans le dictionnaire seule",
-      "Sa sonorité",
+      "Une image mentale strictement privée et totalement incommunicable à autrui",
+      "Sa définition figée inscrite une fois pour toutes dans le dictionnaire officiel",
+      "Sa sonorité propre, indépendamment de tout contexte d'emploi ou de pratique",
     ],
     correct: 0,
     explanation:
@@ -160,10 +160,10 @@ export const langageQuestions: RawQuestion[] = [
     question:
       "Peut-on dire que les animaux possèdent un véritable langage ?",
     answers: [
-      "Ils communiquent par des signaux, mais sans la double articulation ni la syntaxe ouverte du langage humain (Benveniste)",
-      "Oui, identique en tout point à celui des hommes",
-      "Non, ils ne communiquent jamais",
-      "Oui, ils écrivent aussi",
+      "Ils communiquent par des signaux fixes, sans la double articulation ni la syntaxe ouverte du langage humain (Benveniste)",
+      "Oui, leur langage est identique en tout point à celui des êtres humains adultes",
+      "Non, les animaux ne transmettent aucune information à leurs congénères en aucune façon",
+      "Oui, certaines espèces produisent des textes écrits comparables aux nôtres",
     ],
     correct: 0,
     explanation:
@@ -172,7 +172,12 @@ export const langageQuestions: RawQuestion[] = [
   {
     question:
       "« Les limites de mon langage signifient les limites de mon monde » est une formule de :",
-    answers: ["Wittgenstein", "Platon", "Bergson", "Saussure"],
+    answers: [
+      "Ludwig Wittgenstein, dans le Tractatus logico-philosophicus",
+      "Platon, dans le dialogue du Cratyle sur la rectitude des noms",
+      "Henri Bergson, dans Matière et mémoire sur les limites de la perception",
+      "Ferdinand de Saussure, dans le Cours de linguistique générale",
+    ],
     correct: 0,
     explanation:
       "Dans le Tractatus, Wittgenstein lie l'étendue de ce que je peux penser et exprimer à celle de mon langage.",
@@ -182,9 +187,9 @@ export const langageQuestions: RawQuestion[] = [
       "La diversité des langues pose la question de savoir si :",
     answers: [
       "La langue qu'on parle façonne notre manière de penser le monde (hypothèse relativiste)",
-      "Toutes les langues sont parfaitement traduisibles sans perte",
-      "Le langage n'a aucune influence sur la pensée",
-      "Il n'existe qu'une seule langue",
+      "Toutes les langues sont parfaitement traduisibles sans aucune perte de sens",
+      "Le langage n'exerce aucune influence sur la façon dont on perçoit la réalité",
+      "Une seule langue universelle suffira bientôt à remplacer toutes les autres",
     ],
     correct: 0,
     explanation:

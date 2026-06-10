@@ -5,9 +5,9 @@ export const raisonQuestions: RawQuestion[] = [
     question: "La raison peut se définir comme :",
     answers: [
       "La faculté de bien juger, de raisonner et de distinguer le vrai du faux",
-      "Une simple émotion",
-      "La force physique",
-      "L'instinct animal",
+      "Une disposition affective orientée vers le plaisir immédiat",
+      "La capacité physique à agir sur le monde extérieur",
+      "Un instinct naturel partagé avec les autres animaux",
     ],
     correct: 0,
     explanation:
@@ -18,9 +18,9 @@ export const raisonQuestions: RawQuestion[] = [
       "On distingue souvent la raison théorique et la raison pratique :",
     answers: [
       "La première connaît ce qui est, la seconde détermine ce qu'il faut faire (l'action morale)",
-      "Elles sont identiques",
-      "La pratique est inférieure car inutile",
-      "La théorique concerne l'art",
+      "La première guide l'action morale, la seconde se borne à décrire les faits",
+      "La première s'applique aux arts, la seconde aux sciences de la nature",
+      "Elles recouvrent exactement la même fonction et sont interchangeables",
     ],
     correct: 0,
     explanation:
@@ -31,9 +31,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Le rationalisme (Descartes, Leibniz) soutient que :",
     answers: [
       "La raison, par ses idées innées, est la source principale de la connaissance",
-      "Toute connaissance vient des sens",
-      "La connaissance est impossible",
-      "La foi prime sur la raison",
+      "Toute connaissance provient exclusivement des données des sens",
+      "La connaissance certaine est hors de portée de l'esprit humain",
+      "La foi religieuse doit toujours primer sur les conclusions de la raison",
     ],
     correct: 0,
     explanation:
@@ -43,10 +43,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "L'empirisme (Locke, Hume) soutient au contraire que :",
     answers: [
-      "Toutes nos idées proviennent de l'expérience sensible (« rien dans l'esprit qui n'ait été dans les sens »)",
-      "La raison seule connaît tout",
-      "Les idées sont innées",
-      "Les sens sont inutiles",
+      "Toutes nos idées proviennent de l'expérience sensible : rien dans l'esprit qui n'ait été dans les sens",
+      "La raison seule, sans les sens, suffit à produire toute connaissance",
+      "L'esprit possède des idées innées antérieures à toute expérience",
+      "Les données sensorielles sont trompeuses et doivent être entièrement écartées",
     ],
     correct: 0,
     explanation:
@@ -57,9 +57,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Le « principe de raison suffisante » (Leibniz) énonce que :",
     answers: [
       "Rien n'arrive sans une raison qui fasse qu'il en soit ainsi et non autrement",
-      "Tout arrive par hasard",
-      "Rien n'a de cause",
-      "La raison est insuffisante",
+      "Certains événements surgissent sans cause ni explication possible",
+      "La raison humaine est trop limitée pour établir des causes certaines",
+      "Seule la volonté divine peut expliquer le cours des événements naturels",
     ],
     correct: 0,
     explanation:
@@ -69,10 +69,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "La distinction entre raison et entendement chez Kant tient à ce que :",
     answers: [
-      "L'entendement applique des concepts à l'expérience, la raison cherche l'inconditionné (au-delà de l'expérience)",
-      "Ils sont synonymes",
-      "La raison est sensible",
-      "L'entendement est une passion",
+      "L'entendement applique des concepts à l'expérience, la raison cherche l'inconditionné au-delà de toute expérience",
+      "L'entendement dépasse l'expérience tandis que la raison lui reste toujours soumise",
+      "Les deux facultés sont synonymes et s'appliquent aux mêmes objets",
+      "La raison traite des données sensibles, l'entendement des passions",
     ],
     correct: 0,
     explanation:
@@ -83,9 +83,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Pour Pascal, à côté de la raison, « le cœur a ses raisons » signifie qu'il existe :",
     answers: [
       "Un ordre de connaissance par l'intuition et le sentiment, irréductible à la raison démonstrative",
-      "Que la raison n'existe pas",
-      "Que seuls comptent les calculs",
-      "Que le cœur est un organe",
+      "Une preuve que la raison démonstrative est totalement illusoire",
+      "Un mode de calcul supérieur fondé sur l'intérêt et la probabilité",
+      "Une simple métaphore médicale sans portée philosophique réelle",
     ],
     correct: 0,
     explanation:
@@ -95,10 +95,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "La raison peut entrer en conflit avec la foi ; la position de Thomas d'Aquin est plutôt :",
     answers: [
-      "Une harmonie : raison et foi, bien comprises, ne peuvent se contredire",
-      "Un rejet total de la raison",
-      "Un rejet total de la foi",
-      "L'indifférence",
+      "Une harmonie : raison et foi, bien comprises, se complètent sans se contredire",
+      "Un rejet total de la raison naturelle au profit de la seule révélation",
+      "Une séparation absolue où foi et raison s'ignorent mutuellement",
+      "Une subordination de la foi à la raison philosophique démonstrative",
     ],
     correct: 0,
     explanation:
@@ -108,10 +108,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "Le mot « raison » désigne aussi la « cause » : « la raison d'un phénomène ». Expliquer rationnellement, c'est :",
     answers: [
-      "Rendre raison, c'est-à-dire trouver les causes et les principes",
-      "Décrire les apparences",
-      "Imaginer une histoire",
-      "Renoncer à comprendre",
+      "Rendre raison d'un fait en trouvant ses causes, ses principes et ses lois",
+      "Se contenter de décrire les apparences visibles sans chercher plus loin",
+      "Construire un récit imaginaire pour donner l'illusion de comprendre",
+      "Admettre que le phénomène dépasse toute capacité de compréhension",
     ],
     correct: 0,
     explanation:
@@ -120,7 +120,12 @@ export const raisonQuestions: RawQuestion[] = [
   {
     question:
       "La « ruse de la raison » est un concept de :",
-    answers: ["Hegel", "Épicure", "Hume", "Bergson"],
+    answers: [
+      "Georg Wilhelm Friedrich Hegel",
+      "Pierre Gassendi dit l'Épicurien",
+      "David Hume",
+      "Henri Bergson",
+    ],
     correct: 0,
     explanation:
       "Pour Hegel, la Raison se sert des passions individuelles (ambition, intérêt) pour réaliser des fins universelles dans l'histoire, à l'insu des acteurs.",
@@ -130,9 +135,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Critiquer les excès de la raison instrumentale (École de Francfort, Adorno) revient à dénoncer :",
     answers: [
       "Une raison réduite au calcul des moyens efficaces, oublieuse des fins et des valeurs",
-      "Toute forme de logique",
-      "L'existence des sciences",
-      "La possibilité de penser",
+      "Tout recours à la logique formelle dans les sciences exactes",
+      "L'existence des sciences naturelles et des techniques modernes",
+      "La simple possibilité de penser de façon cohérente et organisée",
     ],
     correct: 0,
     explanation:
@@ -142,10 +147,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "Distinguer raisonner et délirer : un délire peut être :",
     answers: [
-      "Parfaitement logique dans son déroulement, mais faux dans ses prémisses",
-      "Toujours illogique",
-      "Identique à la raison",
-      "Impossible à concevoir",
+      "Parfaitement logique dans son déroulement, mais faux dans ses prémisses de départ",
+      "Toujours incohérent et dépourvu de toute structure logique interne",
+      "Rigoureusement identique à un raisonnement rationnel et valide",
+      "Un phénomène purement physique sans lien avec l'activité mentale",
     ],
     correct: 0,
     explanation:
@@ -156,9 +161,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Le « tribunal de la raison » (Kant, Lumières) exprime l'idée que :",
     answers: [
       "Toute croyance et toute autorité doivent être soumises à l'examen critique de la raison",
-      "La raison doit être abolie",
-      "On doit croire sans examiner",
-      "L'autorité est toujours juste",
+      "La raison étant dangereuse, elle doit être abolie au profit de la coutume",
+      "Il faut accepter les dogmes sans les soumettre à aucun examen personnel",
+      "L'autorité politique ou religieuse est toujours plus fiable que la raison",
     ],
     correct: 0,
     explanation:
@@ -168,10 +173,10 @@ export const raisonQuestions: RawQuestion[] = [
     question:
       "Déduction, induction : la déduction consiste à :",
     answers: [
-      "Tirer d'un principe général une conséquence nécessaire (du général au particulier)",
-      "Généraliser à partir de cas observés",
-      "Inventer au hasard",
-      "Recopier l'expérience",
+      "Tirer d'un principe général une conséquence nécessaire, en allant du général au particulier",
+      "Partir de cas particuliers observés pour formuler une loi générale probable",
+      "Produire des hypothèses au hasard sans s'appuyer sur aucun principe",
+      "Reproduire fidèlement les données de l'expérience sans en tirer de loi",
     ],
     correct: 0,
     explanation:
@@ -182,9 +187,9 @@ export const raisonQuestions: RawQuestion[] = [
       "Le rationalisme reconnaît des limites à la raison lorsqu'il admet que :",
     answers: [
       "La raison peut connaître ses propres limites et qu'il existe peut-être de l'irrationnel",
-      "La raison connaît absolument tout",
-      "Rien ne lui échappe jamais",
-      "Elle doit renoncer à toute critique",
+      "La raison est absolument illimitée et peut tout connaître sans exception",
+      "Aucun domaine ne lui échappe, ni la nature, ni Dieu, ni l'histoire",
+      "Face à ses limites, elle doit renoncer à toute démarche critique",
     ],
     correct: 0,
     explanation:

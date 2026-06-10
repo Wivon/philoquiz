@@ -6,9 +6,9 @@ export const veriteQuestions: RawQuestion[] = [
       "La définition classique de la vérité (Thomas d'Aquin) est :",
     answers: [
       "L'adéquation de l'esprit et de la chose (adaequatio rei et intellectus)",
-      "Ce que pense la majorité",
-      "Ce qui est utile",
-      "Ce qui est beau",
+      "Ce qui est accepté par la majorité des membres de la société",
+      "Ce qui se révèle utile à la vie pratique et à l'action humaine",
+      "Ce qui produit une impression de beauté et d'harmonie sur l'esprit",
     ],
     correct: 0,
     explanation:
@@ -19,9 +19,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Il faut distinguer la vérité de la réalité : la vérité est une propriété :",
     answers: [
       "Du discours ou du jugement (qui peut être vrai ou faux), non des choses elles-mêmes",
-      "Des objets matériels uniquement",
-      "Des émotions",
-      "Du hasard",
+      "Des objets matériels, mesurables et observables dans le monde physique",
+      "Des émotions ressenties et des états intérieurs propres à chaque individu",
+      "Des événements qui se produisent indépendamment de tout observateur humain",
     ],
     correct: 0,
     explanation:
@@ -32,9 +32,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Le doute méthodique de Descartes a pour but de :",
     answers: [
       "Atteindre une vérité indubitable en rejetant tout ce qui peut être mis en doute",
-      "Douter de tout pour toujours (scepticisme)",
-      "Détruire la raison",
-      "Croire sans examen",
+      "S'installer dans le scepticisme définitif en refusant toute certitude possible",
+      "Détruire la confiance en la raison pour mieux se soumettre à la foi",
+      "Abandonner tout examen rationnel et accepter les croyances sans les questionner",
     ],
     correct: 0,
     explanation:
@@ -45,9 +45,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Le critère de vérité chez Descartes est :",
     answers: [
       "L'évidence : ce qui se présente à l'esprit clairement et distinctement",
-      "L'accord du plus grand nombre",
-      "La tradition",
-      "L'utilité pratique",
+      "Le consensus populaire obtenu par le débat et le vote de la majorité",
+      "L'autorité de la tradition religieuse et des textes philosophiques anciens",
+      "L'utilité pratique et les effets bénéfiques produits dans la vie quotidienne",
     ],
     correct: 0,
     explanation:
@@ -58,9 +58,9 @@ export const veriteQuestions: RawQuestion[] = [
       "La conception « pragmatiste » de la vérité (W. James) soutient que :",
     answers: [
       "Est vrai ce qui réussit, ce qui a des effets pratiques avantageux pour l'action",
-      "La vérité est l'adéquation à la chose",
-      "La vérité est inaccessible",
-      "La vérité est l'évidence",
+      "La vérité consiste dans l'adéquation fidèle de l'esprit à la chose réelle",
+      "La vérité absolue est inaccessible et toute certitude reste hors de portée",
+      "La vérité se reconnaît à l'évidence immédiate qu'elle produit dans l'esprit",
     ],
     correct: 0,
     explanation:
@@ -71,9 +71,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Le critère de « cohérence » définit le vrai comme :",
     answers: [
       "L'accord d'une proposition avec un ensemble cohérent et non contradictoire d'autres propositions",
-      "Sa correspondance à un fait observable",
-      "Son utilité",
-      "Sa beauté",
+      "La correspondance exacte d'un énoncé à un fait directement observable dans le monde",
+      "La capacité d'une idée à produire des effets utiles et pratiquement avantageux",
+      "La beauté formelle et la simplicité élégante d'une théorie ou d'un système",
     ],
     correct: 0,
     explanation:
@@ -84,9 +84,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Le scepticisme antique (Pyrrhon) soutient que :",
     answers: [
       "On doit suspendre son jugement (épochè), aucune vérité n'étant certaine, pour atteindre la tranquillité",
-      "Toute vérité est facilement connue",
-      "La science prouve tout",
-      "Dieu garantit la vérité",
+      "Toute vérité est aisément accessible à la raison humaine par un effort suffisant",
+      "La science expérimentale fournit des preuves définitives et des certitudes absolues",
+      "Dieu garantit la vérité de nos idées claires en tant que fondement ultime",
     ],
     correct: 0,
     explanation:
@@ -97,9 +97,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Distinguer vérité et opinion (Platon), c'est opposer :",
     answers: [
       "Le savoir fondé en raison (épistémè) et la croyance non justifiée (doxa)",
-      "Deux formes identiques de connaissance",
-      "Le vrai et le réel",
-      "La science et l'art",
+      "Deux formes de connaissance équivalentes conduisant aux mêmes conclusions",
+      "Le discours vrai et la réalité objective qu'il cherche à saisir fidèlement",
+      "La rigueur scientifique et la liberté créatrice propre à l'expression artistique",
     ],
     correct: 0,
     explanation:
@@ -110,9 +110,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Pour Spinoza, le critère du vrai est interne : « le vrai est l'indice de lui-même », ce qui signifie :",
     answers: [
       "L'idée vraie se reconnaît par elle-même, comme la lumière se montre et montre l'obscurité",
-      "On a besoin d'un signe extérieur pour reconnaître le vrai",
-      "La vérité dépend de l'autorité",
-      "Le vrai est inconnaissable",
+      "On a besoin d'un signe extérieur et indépendant pour reconnaître qu'une idée est vraie",
+      "La vérité d'une idée dépend de l'autorité qui l'affirme et la garantit publiquement",
+      "Le vrai est fondamentalement inconnaissable, l'esprit humain restant dans l'obscurité",
     ],
     correct: 0,
     explanation:
@@ -123,9 +123,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Pour Nietzsche, les « vérités » sont souvent :",
     answers: [
       "Des « illusions dont on a oublié qu'elles le sont », des métaphores devenues habituelles et utiles à la vie",
-      "Des certitudes absolues et éternelles",
-      "Des données purement mathématiques",
-      "Sans aucun lien avec le langage",
+      "Des certitudes absolues et éternelles, indépendantes de tout contexte historique",
+      "Des données purement mathématiques, neutres et détachées de toute valeur vitale",
+      "Des révélations objectives, entièrement séparées du langage et de l'interprétation",
     ],
     correct: 0,
     explanation:
@@ -136,9 +136,9 @@ export const veriteQuestions: RawQuestion[] = [
       "La distinction entre vérités de raison et vérités de fait (Leibniz) tient à ce que :",
     answers: [
       "Les vérités de raison sont nécessaires (leur contraire est impossible), les vérités de fait contingentes (leur contraire est possible)",
-      "Elles sont identiques",
-      "Les vérités de fait sont éternelles",
-      "Les vérités de raison dépendent de l'expérience",
+      "Les deux types de vérités sont identiques et reposent sur les mêmes fondements logiques",
+      "Les vérités de fait sont éternelles et nécessaires, contrairement aux vérités de raison",
+      "Les vérités de raison dépendent entièrement de l'expérience et de l'observation empirique",
     ],
     correct: 0,
     explanation:
@@ -149,9 +149,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Une vérité scientifique se reconnaît, selon Popper, à ce qu'elle est :",
     answers: [
       "Réfutable : on peut concevoir une expérience qui pourrait la démentir",
-      "Impossible à contester",
-      "Acceptée par tous",
-      "Belle et harmonieuse",
+      "Définitivement établie et impossible à remettre en cause par de nouvelles données",
+      "Universellement acceptée par l'ensemble de la communauté scientifique internationale",
+      "Harmonieuse et belle, s'intégrant élégamment dans un système théorique cohérent",
     ],
     correct: 0,
     explanation:
@@ -162,9 +162,9 @@ export const veriteQuestions: RawQuestion[] = [
       "La tolérance et la recherche de la vérité supposent de distinguer :",
     answers: [
       "La vérité (objective, valant pour tous) et la conviction ou la croyance (subjective)",
-      "Le vrai et le beau",
-      "La science et la technique",
-      "Le passé et le présent",
+      "Le vrai et le beau, en reconnaissant que ces deux valeurs ne coïncident jamais",
+      "La science rigoureuse et la technique appliquée à la transformation du monde",
+      "Le passé révolu et le présent vécu, irréductibles l'un à l'autre philosophiquement",
     ],
     correct: 0,
     explanation:
@@ -175,9 +175,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Le mensonge se distingue de l'erreur en ce que :",
     answers: [
       "Le menteur sait la vérité et la déforme volontairement ; celui qui se trompe croit dire vrai",
-      "Ils sont identiques",
-      "L'erreur est toujours volontaire",
-      "Le mensonge est involontaire",
+      "L'erreur et le mensonge sont identiques, car tous deux produisent de fausses croyances",
+      "L'erreur est toujours volontaire et témoigne d'une mauvaise foi envers autrui",
+      "Le mensonge est un état involontaire, tandis que l'erreur résulte d'une intention délibérée",
     ],
     correct: 0,
     explanation:
@@ -188,9 +188,9 @@ export const veriteQuestions: RawQuestion[] = [
       "Dire que « toutes les vérités ne sont pas bonnes à dire » soulève le problème :",
     answers: [
       "Du conflit possible entre l'exigence de vérité et d'autres valeurs (le bien, le respect d'autrui)",
-      "De l'inexistence de la vérité",
-      "De la supériorité du mensonge",
-      "De l'inutilité de la science",
+      "De l'inexistence de toute vérité objective, chaque discours n'étant qu'une perspective",
+      "De la supériorité morale du mensonge bienveillant sur la vérité blessante et cruelle",
+      "De l'inutilité de la science face aux questions existentielles qui comptent vraiment",
     ],
     correct: 0,
     explanation:

@@ -4,22 +4,22 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Pour Aristote, le bonheur (eudaimonia) consiste en :",
     answers: [
-      "Une activité de l'âme conforme à la vertu, l'accomplissement de notre fonction propre",
-      "L'accumulation de plaisirs immédiats",
-      "L'absence de toute activité",
-      "La possession de richesses",
+      "Une activité de l'âme conforme à la vertu, l'accomplissement de notre fonction",
+      "L'accumulation du plus grand nombre possible de plaisirs immédiats",
+      "L'absence de toute activité, dans un repos parfait et continu",
+      "La possession de richesses et d'honneurs reconnus par tous",
     ],
     correct: 0,
     explanation:
       "Le bonheur est l'activité la plus haute de l'homme : l'exercice de la raison selon la vertu, sur une vie entière.",
   },
   {
-    question: "Épicure distingue plusieurs sortes de désirs. Lesquels ?",
+    question: "Épicure distingue plusieurs sortes de désirs. Lesquelles ?",
     answers: [
-      "Naturels et nécessaires ; naturels non nécessaires ; ni naturels ni nécessaires (vains)",
-      "Bons désirs et mauvais désirs",
-      "Désirs du corps et désirs de l'âme seulement",
-      "Désirs conscients et inconscients",
+      "Naturels et nécessaires, naturels non nécessaires, ni naturels ni nécessaires",
+      "Bons désirs et mauvais désirs, selon qu'ils nuisent ou non à autrui",
+      "Désirs du corps et désirs de l'âme, sans autre distinction possible",
+      "Désirs conscients et désirs inconscients refoulés au fond de nous",
     ],
     correct: 0,
     explanation:
@@ -28,10 +28,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Pour Épicure, le plaisir recherché par le sage est avant tout :",
     answers: [
-      "L'ataraxie : l'absence de trouble, un plaisir « en repos »",
-      "Le plaisir en mouvement et l'excès",
-      "La gloire et les honneurs",
-      "La souffrance maîtrisée",
+      "L'ataraxie : l'absence de trouble, un plaisir stable et « en repos »",
+      "Le plaisir en mouvement, l'excès et l'intensité sans cesse renouvelés",
+      "La gloire et les honneurs rendus par l'ensemble de la cité",
+      "La souffrance recherchée et maîtrisée comme une épreuve formatrice",
     ],
     correct: 0,
     explanation:
@@ -41,10 +41,10 @@ export const bonheurQuestions: RawQuestion[] = [
     question:
       "Les stoïciens distinguent ce qui dépend de nous et ce qui n'en dépend pas. Le bonheur consiste alors à :",
     answers: [
-      "Ne désirer que ce qui dépend de nous (nos jugements) et accepter le reste",
-      "Tout contrôler dans le monde",
-      "Fuir le monde et les autres",
-      "Satisfaire tous ses désirs",
+      "Ne désirer que ce qui dépend de nous, et accepter sereinement tout le reste",
+      "Prendre le contrôle de tout ce qui arrive dans le monde extérieur",
+      "Fuir le monde et les autres pour vivre dans une solitude complète",
+      "Chercher à satisfaire sans exception l'ensemble de nos désirs",
     ],
     correct: 0,
     explanation:
@@ -53,10 +53,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Pour Kant, le bonheur est un idéal :",
     answers: [
-      "De l'imagination, non de la raison : trop indéterminé pour fonder la morale",
-      "De la raison pure, parfaitement déterminable",
-      "De la science",
-      "De la seule sensibilité animale",
+      "De l'imagination, trop indéterminé pour servir de fondement à la morale",
+      "De la raison pure, parfaitement défini et valable pour tous les hommes",
+      "De la science, que l'on pourrait calculer avec exactitude et certitude",
+      "De la seule sensibilité, commun à l'homme et aux autres animaux",
     ],
     correct: 0,
     explanation:
@@ -65,10 +65,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Selon Schopenhauer, le bonheur est :",
     answers: [
-      "Négatif : seulement la cessation momentanée d'une souffrance ou d'un manque",
-      "Un état positif durable et facile à atteindre",
-      "Garanti par la nature",
-      "Une pure illusion sans aucun fondement",
+      "Quelque chose de négatif : la cessation momentanée d'une souffrance",
+      "Un état positif et durable, à la portée de chacun et sans effort",
+      "Un but que la nature elle-même nous garantit toujours d'atteindre",
+      "Une illusion dépourvue du moindre fondement dans notre expérience",
     ],
     correct: 0,
     explanation:
@@ -77,7 +77,12 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question:
       "Le « paradoxe du bonheur » — le chercher directement l'éloigne — est notamment formulé par :",
-    answers: ["John Stuart Mill", "Descartes", "Platon", "Hobbes"],
+    answers: [
+      "John Stuart Mill",
+      "René Descartes",
+      "Platon",
+      "Thomas Hobbes",
+    ],
     correct: 0,
     explanation:
       "Mill : on est heureux en visant un autre but que son propre bonheur ; ceux qui s'interrogent sans cesse sur leur bonheur cessent de l'être.",
@@ -85,10 +90,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Pour Pascal, le « divertissement » est :",
     answers: [
-      "Ce qui nous détourne de penser à notre condition (misère, mort) : un faux remède",
-      "Le vrai bonheur de l'homme",
-      "Une activité artistique noble",
-      "La contemplation de Dieu",
+      "Ce qui nous détourne de penser à notre condition : un faux remède",
+      "Le bonheur véritable, enfin trouvé dans l'agitation et dans le jeu",
+      "Une activité artistique noble qui élève l'âme vers la beauté",
+      "La contemplation paisible de Dieu, seule source de repos durable",
     ],
     correct: 0,
     explanation:
@@ -99,9 +104,9 @@ export const bonheurQuestions: RawQuestion[] = [
       "Dans les Rêveries du promeneur solitaire, Rousseau décrit un bonheur où :",
     answers: [
       "Le seul sentiment de l'existence suffit, sans manque ni projet",
-      "Il faut posséder beaucoup de biens",
-      "Le bonheur vient des honneurs",
-      "Seule la raison rend heureux",
+      "La possession de nombreux biens procure enfin la sérénité",
+      "Les honneurs et la reconnaissance d'autrui comblent le cœur",
+      "Seul l'exercice de la raison, et non le sentiment, rend heureux",
     ],
     correct: 0,
     explanation:
@@ -111,10 +116,10 @@ export const bonheurQuestions: RawQuestion[] = [
     question:
       "Pourquoi peut-on dire qu'« il n'y a pas de science du bonheur » ?",
     answers: [
-      "Le bonheur est subjectif et variable : chacun le conçoit autrement, sans définition universelle",
-      "Parce que personne n'a jamais essayé",
-      "Parce que le bonheur n'existe pas",
-      "Parce que la science l'a prouvé impossible",
+      "Subjectif et variable, le bonheur n'a aucune définition universelle",
+      "Parce que personne n'a encore réellement essayé d'en faire une science",
+      "Parce que le bonheur n'existe pas : ce n'est qu'une idée sans objet",
+      "Parce que la science a déjà démontré qu'aucun bonheur n'est possible",
     ],
     correct: 0,
     explanation:
@@ -124,10 +129,10 @@ export const bonheurQuestions: RawQuestion[] = [
     question:
       "Pour Aristote, peut-on déclarer un homme heureux à n'importe quel instant de sa vie ?",
     answers: [
-      "Non : le bonheur s'apprécie sur une vie entière (« une hirondelle ne fait pas le printemps »)",
-      "Oui, à chaque instant pris isolément",
-      "Seulement dans la jeunesse",
-      "Seulement après la mort",
+      "Non : il s'apprécie sur une vie entière (« une hirondelle ne fait pas le printemps »)",
+      "Oui : on est pleinement heureux à chaque instant pris isolément",
+      "Seulement durant la jeunesse, avant que les soucis ne surviennent",
+      "Seulement après la mort, lorsque la vie entière peut être jugée",
     ],
     correct: 0,
     explanation:
@@ -136,10 +141,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Le « souverain bien » désigne :",
     answers: [
-      "Le bien suprême, recherché pour lui-même et non en vue d'autre chose",
-      "L'argent",
-      "Le pouvoir politique",
-      "Le plaisir physique",
+      "Le bien suprême, recherché pour lui-même et non pour autre chose",
+      "L'argent, vers lequel tendent en réalité toutes nos actions",
+      "Le pouvoir politique, qui permet d'obtenir ensuite tout le reste",
+      "Le plaisir du corps, premier mobile de toute conduite humaine",
     ],
     correct: 0,
     explanation:
@@ -149,10 +154,10 @@ export const bonheurQuestions: RawQuestion[] = [
     question:
       "Pour les épicuriens, pourquoi la crainte de la mort est-elle irrationnelle ?",
     answers: [
-      "« Quand nous sommes, la mort n'est pas ; quand la mort est, nous ne sommes plus »",
-      "Parce que la mort n'existe pas",
-      "Parce qu'on renaît après la mort",
-      "Parce que la mort est un bien désirable",
+      "« Quand nous sommes la mort n'est pas ; quand elle est, nous ne sommes plus »",
+      "Parce que la mort, tout simplement, n'existe pas réellement",
+      "Parce que l'on renaît aussitôt après dans une autre existence",
+      "Parce que la mort est en vérité un bien qu'il faudrait désirer",
     ],
     correct: 0,
     explanation:
@@ -161,10 +166,10 @@ export const bonheurQuestions: RawQuestion[] = [
   {
     question: "Comment distinguer le bonheur du plaisir et de la joie ?",
     answers: [
-      "Le bonheur est un état global et durable ; le plaisir est ponctuel, la joie intense mais passagère",
-      "Ce sont des synonymes exacts",
-      "Le bonheur est toujours négatif",
-      "Le bonheur est réservé aux sages",
+      "Un état global et durable, là où plaisir et joie restent passagers",
+      "Exactement la même chose que le plaisir éprouvé par le corps",
+      "Quelque chose de toujours négatif, fait d'absence et de manque",
+      "Un état réservé aux seuls sages, inaccessible au commun des hommes",
     ],
     correct: 0,
     explanation:
@@ -174,10 +179,10 @@ export const bonheurQuestions: RawQuestion[] = [
     question:
       "Selon Freud (Malaise dans la civilisation), le « programme du principe de plaisir » :",
     answers: [
-      "Est irréalisable : la civilisation exige un renoncement pulsionnel, source de malaise",
-      "Est pleinement réalisable pour tous",
-      "N'a aucun rapport avec le bonheur",
-      "Garantit un bonheur collectif",
+      "Est irréalisable : la civilisation impose un renoncement, source de malaise",
+      "Est pleinement réalisable par chacun, pourvu qu'il le veuille vraiment",
+      "N'a au fond aucun rapport avec la question du bonheur humain",
+      "Est le moyen le plus sûr de garantir le bonheur de toute la collectivité",
     ],
     correct: 0,
     explanation:
