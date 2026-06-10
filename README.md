@@ -1,82 +1,87 @@
 # 🧠 PhiloQuiz
 
 Quiz multijoueur type **Kahoot!** pour réviser le **bac de philosophie** (Terminale Générale).
-Construit avec **Next.js** (App Router) + **Socket.IO** pour le temps réel sur réseau local.
+Construit avec **Next.js** (App Router) + **WebRTC / PeerJS** : le multijoueur fonctionne en
+**pair-à-pair**, sans serveur — le site est entièrement statique et **hébergeable partout**
+(Vercel, GitHub Pages…).
 
 - 17 notions du programme · **255 questions** (15 par notion) avec explications « À retenir »
-- Mode **multijoueur** sur le même Wi-Fi : un hôte crée la partie, partage un **code PIN**
+- Réponses **équilibrées en longueur** : la bonne réponse ne se trahit pas, et l'ordre est
+  mélangé à chaque partie
+- 4 modes : **Créer une partie**, **Rejoindre avec un PIN**, **Jouer en solo**,
+  **Héberger sans jouer** (mode tableau / vidéoprojecteur)
 - Chaque joueur choisit son **prénom** et un **avatar emoji**
-- L'hôte choisit les **notions** à travailler et le nombre de questions
-- Questions en **QCM** chronométrées, **classement** affiché entre chaque question, **podium** final
-- Mode **solo** entièrement jouable hors-ligne
+- QCM **chronométrés** (score à la rapidité), **classement** entre chaque question, **podium** final
+- Transitions et **animations** fluides entre les écrans
 
 ## 🚀 Lancer l'application
 
 ```bash
 npm install
-npm run dev          # serveur de développement (http://localhost:3000)
+npm run dev          # http://localhost:3000
 ```
 
-Pour jouer **à plusieurs** : lancez l'app sur l'ordinateur « hôte », puis demandez aux
-autres joueurs (téléphones/ordinateurs sur le **même réseau Wi-Fi**) d'ouvrir l'adresse
-réseau affichée dans le terminal et sur l'écran du lobby, par exemple :
-
-```
-  ▸ Réseau :  http://192.168.1.42:3000
-```
-
-Choisissez « Rejoindre avec un PIN », saisissez le code à 6 chiffres, et c'est parti !
-
-### Build de production
+Build de production :
 
 ```bash
 npm run build
-npm run start        # NODE_ENV=production, sert le build optimisé
+npm run start
 ```
 
-Le port se change avec `PORT=4000 npm run dev`.
+> Pour un export 100 % statique (ex. **GitHub Pages**), ajoute `output: "export"` dans
+> [`next.config.ts`](next.config.ts), puis `npm run build` génère le dossier `out/`.
 
-## ☁️ Vercel & multijoueur : à lire
+## ☁️ Déploiement & multijoueur
 
-Le **multijoueur est uniquement local (LAN)**. C'est l'ordinateur **hôte** qui exécute
-l'app (`npm run dev` ou `npm run start`) et qui **détient l'état de la partie** ; les autres
-joueurs s'y connectent via l'adresse réseau + le code PIN. Tout passe par un serveur
-**Socket.IO** persistant lancé sur la machine hôte (`server.ts`).
+Le jeu est **entièrement côté client** : Vercel (ou GitHub Pages) ne sert que des fichiers
+statiques. Le temps réel passe **directement de navigateur à navigateur** via WebRTC (PeerJS),
+**sans transiter par le serveur**. On peut donc déployer l'app telle quelle et jouer à
+plusieurs depuis l'URL publique.
 
-➡️ **Vercel ne peut pas héberger le multijoueur.** Vercel exécute des fonctions
-_serverless_ sans processus persistant : il n'y a donc aucun serveur Socket.IO, et la
-connexion temps réel échoue. Si vous ouvrez l'app déployée sur Vercel et cliquez sur
-« Créer une partie », un message vous le rappelle. **Sur Vercel, seul le mode solo
-fonctionne.**
+**Comment ça marche :**
 
-Pour jouer à plusieurs : lancez l'app **en local** sur la machine hôte et partagez
-l'adresse réseau (ex. `http://192.168.1.42:3000`). Si vous voulez un déploiement en ligne
-pour le multijoueur, il faut une plateforme qui supporte les serveurs Node persistants
-(Render, Railway, Fly.io, un VPS…), pas Vercel.
+- Le **navigateur de l'hôte est l'autorité** : il détient l'état de la partie (joueurs,
+  quiz, minuteurs, scores) et rediffuse tout aux joueurs.
+- Le **code PIN encode l'identifiant PeerJS de l'hôte** : taper le PIN suffit à se connecter
+  en P2P.
+- Le **handshake** initial (signaling) utilise le **broker public PeerJS** — aucune donnée
+  de jeu n'y transite, mais une **connexion Internet** est nécessaire pour l'établir.
 
-## 🎮 Comment jouer
+**À savoir :**
 
-1. **Créer une partie** → entrez prénom + avatar → un **code PIN** est généré.
-2. Les autres joueurs ouvrent l'adresse réseau et **rejoignent avec le PIN**.
-3. L'hôte sélectionne les **notions** et le **nombre de questions**, puis **démarre**.
-4. À chaque question, tout le monde répond le plus vite possible (plus on est rapide, plus
-   on gagne de points). Le **classement** s'affiche entre chaque question.
-5. **Podium** final, puis possibilité de **rejouer**.
+- Connectez de préférence les appareils au **même Wi-Fi** (les liaisons P2P s'établissent
+  plus facilement). Certains réseaux « invités » avec **isolation des clients** bloquent le
+  P2P.
+- L'**hôte** pilote la partie : s'il ferme l'onglet, la partie se termine (comme sur Kahoot).
+- Si la liaison temps réel échoue (pas d'Internet, réseau bloquant), un message l'indique ;
+  le **mode solo** reste toujours disponible.
 
-> Le mode **solo** suit le même principe, sans connexion : idéal pour réviser seul.
+## 🎮 Les modes
+
+1. **Créer une partie** — entre ton prénom + avatar, obtiens un **code PIN**. Tu joues *et*
+   tu pilotes la partie.
+2. **Rejoindre avec un PIN** — entre le PIN + prénom + avatar pour rejoindre l'hôte.
+3. **Héberger sans jouer** 📽️ — tu héberges sans participer : idéal pour **projeter** les
+   questions et le classement au tableau pendant que les élèves répondent sur leur appareil.
+4. **Jouer en solo** — révise seul, entièrement hors-ligne.
+
+Déroulé d'une partie : l'hôte choisit les **notions** et le **nombre de questions** (5/10/15/20),
+puis **démarre**. À chaque question, plus on répond vite, plus on marque de points. Le
+**classement** s'affiche entre les questions, et un **podium** clôt la partie.
 
 ## 🗂️ Architecture
 
 | Chemin | Rôle |
 | --- | --- |
-| `server.ts` | Serveur HTTP custom (Next.js) + moteur de jeu **Socket.IO** (état des salles en mémoire) |
+| `hooks/useGame.ts` | Couche temps réel **PeerJS** (hôte = autorité, joueurs = clients) + état React |
+| `lib/host-engine.ts` | Moteur de jeu autoritaire (joueurs, quiz, minuteurs, scoring) tournant chez l'hôte |
+| `lib/realtime.ts` | Contrat des messages P2P (hôte ↔ joueurs) + identifiant PeerJS du PIN |
 | `lib/questions/*.ts` | Les questions, **un fichier par notion** (15 chacune) |
-| `lib/questions/index.ts` | Agrégation, tirage aléatoire et mélange des réponses |
-| `lib/socket-events.ts` | Contrat d'événements partagé client/serveur (typé) |
+| `lib/questions/index.ts` | Agrégation, tirage aléatoire et **mélange des réponses** |
 | `lib/scoring.ts` | Calcul du score à la Kahoot (rapidité) |
-| `hooks/useGame.ts` | Connexion Socket.IO côté client + état de la partie |
-| `components/*` | Écrans : accueil, lobby, question, révélation/classement, podium, solo |
-| `app/page.tsx` | Aiguillage entre accueil / hôte / rejoindre / solo |
+| `components/*` | Écrans : accueil, identité, lobby, question, présentation, révélation/classement, podium, solo |
+| `app/page.tsx` | Aiguillage entre accueil / créer / rejoindre / présenter / solo |
+| `app/globals.css` | Thème + **animations** (entrées d'écran, apparition échelonnée, `prefers-reduced-motion`) |
 
 ## ➕ Ajouter ou modifier des questions
 
@@ -85,14 +90,15 @@ Chaque notion a son fichier dans `lib/questions/` (ex. `liberte.ts`). Une questi
 ```ts
 {
   question: "…",
-  answers: ["A", "B", "C", "D"], // exactement 4 réponses
+  answers: ["A", "B", "C", "D"], // exactement 4 réponses, de longueur comparable
   correct: 0,                     // index de la bonne réponse (0-3)
   explanation: "…",              // affichée après la question
 }
 ```
 
 Les réponses sont **mélangées automatiquement** à chaque partie : l'ordre dans le fichier
-n'a pas d'importance.
+n'a pas d'importance. Garde les 4 réponses de **longueur proche** pour que la bonne ne se
+repère pas à l'œil.
 
 ## 📚 Notions couvertes
 
