@@ -34,8 +34,12 @@ export function Podium({
       </h1>
 
       <div className="flex items-end justify-center gap-3">
-        {order.map((e) => (
-          <div key={e.id} className="flex w-24 flex-col items-center">
+        {order.map((e, i) => (
+          <div
+            key={e.id}
+            style={{ animationDelay: `${i * 140}ms` }}
+            className="tile-enter flex w-24 flex-col items-center"
+          >
             <div className="text-4xl">{e.emoji}</div>
             <div className="mb-1 max-w-full truncate font-black text-white">
               {e.name}

@@ -27,7 +27,7 @@ export function PresenterQuestion({
         <Countdown startedAt={receivedAt} duration={question.duration} />
       </div>
 
-      <div className="rounded-3xl bg-white p-8 text-center shadow-2xl">
+      <div className="scale-in rounded-3xl bg-white p-8 text-center shadow-2xl">
         <h2 className="text-3xl font-black leading-snug text-violet-900 sm:text-4xl">
           {question.question}
         </h2>

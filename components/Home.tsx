@@ -16,7 +16,7 @@ export function Home({
   onPresent: () => void;
 }) {
   return (
-    <div className="mx-auto flex max-w-lg flex-col items-center gap-8 text-center">
+    <div className="screen-enter mx-auto flex max-w-lg flex-col items-center gap-8 text-center">
       <div>
         <h1 className="text-6xl font-black tracking-tight text-white drop-shadow-lg sm:text-7xl">
           Philo<span className="text-amber-300">Quiz</span>

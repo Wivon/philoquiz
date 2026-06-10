@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 
 import { CONNECTION_ERROR, useGame } from "@/hooks/useGame";
 import { Identity } from "./Identity";
@@ -63,9 +63,13 @@ export function Multiplayer({
     onExit();
   };
 
+  let screenKey: string;
+  let content: ReactNode;
+
   if (!joined || !game.room) {
     if (mode === "present") {
-      return (
+      screenKey = "present-intro";
+      content = (
         <Card className="mx-auto flex max-w-md flex-col gap-4 text-center">
           <h2 className="text-3xl font-black text-violet-900">
             Mode présentation 📽️
@@ -91,78 +95,91 @@ export function Multiplayer({
           </button>
         </Card>
       );
+    } else {
+      screenKey = `${mode}-identity`;
+      content = (
+        <Identity
+          mode={mode}
+          onSubmit={handleIdentity}
+          onBack={onExit}
+          error={error}
+          busy={busy}
+        />
+      );
     }
-    return (
-      <Identity
-        mode={mode}
-        onSubmit={handleIdentity}
-        onBack={onExit}
-        error={error}
-        busy={busy}
-      />
-    );
+  } else {
+    const { room, myId } = game;
+    const isHost = room.hostId === myId;
+    const isPresenter = mode === "present";
+    const isLast = room.currentQuestionIndex >= room.totalQuestions - 1;
+    screenKey = `${room.phase}-${room.currentQuestionIndex}`;
+
+    switch (room.phase) {
+      case "question":
+        content =
+          game.question &&
+          (isPresenter ? (
+            <PresenterQuestion
+              question={game.question.data}
+              receivedAt={game.question.receivedAt}
+              answered={game.answered}
+            />
+          ) : (
+            <QuestionView
+              question={game.question.data}
+              receivedAt={game.question.receivedAt}
+              answered={game.answered}
+              onAnswer={game.answer}
+            />
+          ));
+        break;
+
+      case "leaderboard":
+        content = game.reveal && game.question && (
+          <RevealView
+            question={game.question.data}
+            reveal={game.reveal}
+            myId={myId}
+            isHost={isHost}
+            isLast={isLast}
+            onNext={game.next}
+          />
+        );
+        break;
+
+      case "finished":
+        screenKey = "finished";
+        content = game.finished && (
+          <Podium
+            entries={game.finished}
+            myId={myId}
+            isHost={isHost}
+            onRestart={game.restart}
+            onLeave={leave}
+          />
+        );
+        break;
+
+      case "lobby":
+      default:
+        screenKey = "lobby";
+        content = (
+          <Lobby
+            room={room}
+            myId={myId}
+            shareUrl={game.shareUrl}
+            onSetNotions={game.setNotions}
+            onSetCount={game.setQuestionCount}
+            onStart={game.start}
+            onLeave={leave}
+          />
+        );
+    }
   }
 
-  const { room, myId } = game;
-  const isHost = room.hostId === myId;
-  const isPresenter = mode === "present";
-  const isLast = room.currentQuestionIndex >= room.totalQuestions - 1;
-
-  switch (room.phase) {
-    case "question":
-      if (!game.question) return null;
-      return isPresenter ? (
-        <PresenterQuestion
-          key={game.question.data.index}
-          question={game.question.data}
-          receivedAt={game.question.receivedAt}
-          answered={game.answered}
-        />
-      ) : (
-        <QuestionView
-          key={game.question.data.index}
-          question={game.question.data}
-          receivedAt={game.question.receivedAt}
-          answered={game.answered}
-          onAnswer={game.answer}
-        />
-      );
-
-    case "leaderboard":
-      return game.reveal && game.question ? (
-        <RevealView
-          question={game.question.data}
-          reveal={game.reveal}
-          myId={myId}
-          isHost={isHost}
-          isLast={isLast}
-          onNext={game.next}
-        />
-      ) : null;
-
-    case "finished":
-      return game.finished ? (
-        <Podium
-          entries={game.finished}
-          myId={myId}
-          isHost={isHost}
-          onRestart={game.restart}
-          onLeave={leave}
-        />
-      ) : null;
-
-    case "lobby":
-    default:
-      return (
-        <Lobby
-          room={room}
-          myId={myId}
-          shareUrl={game.shareUrl}
-          onSetNotions={game.setNotions}
-          onSetCount={game.setQuestionCount}
-          onStart={game.start}
-          onLeave={leave}
-        />
-      );
-  }
+  return (
+    <div key={screenKey} className="screen-enter w-full">
+      {content}
+    </div>
+  );
 }

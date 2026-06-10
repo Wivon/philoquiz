@@ -81,7 +81,7 @@ export function Solo({ onExit }: { onExit: () => void }) {
   // ---- Setup ----
   if (phase === "setup") {
     return (
-      <Card className="mx-auto flex max-w-2xl flex-col gap-5">
+      <Card className="screen-enter mx-auto flex max-w-2xl flex-col gap-5">
         <h2 className="text-center text-3xl font-black text-violet-900">
           Mode solo 🧠
         </h2>
@@ -130,7 +130,7 @@ export function Solo({ onExit }: { onExit: () => void }) {
   // ---- Done ----
   if (phase === "done") {
     return (
-      <Card className="mx-auto flex max-w-lg flex-col items-center gap-4 text-center">
+      <Card className="screen-enter mx-auto flex max-w-lg flex-col items-center gap-4 text-center">
         <h2 className="text-4xl font-black text-violet-900">Terminé ! 🎉</h2>
         <p className="text-2xl font-bold text-violet-700">
           {correctCount}/{quiz.length} bonnes réponses
@@ -152,7 +152,10 @@ export function Solo({ onExit }: { onExit: () => void }) {
   const isLast = index + 1 >= quiz.length;
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-col gap-5">
+    <div
+      key={`${phase}-${index}`}
+      className="screen-enter mx-auto flex w-full max-w-3xl flex-col gap-5"
+    >
       <div className="flex items-center justify-between text-white">
         <span className="rounded-full bg-white/15 px-4 py-1 font-bold">
           {notionLabel(q.notion)}
@@ -171,7 +174,7 @@ export function Solo({ onExit }: { onExit: () => void }) {
         )}
       </div>
 
-      <div className="rounded-3xl bg-white p-6 text-center shadow-2xl sm:p-8">
+      <div className="scale-in rounded-3xl bg-white p-6 text-center shadow-2xl sm:p-8">
         <h2 className="text-2xl font-black leading-snug text-violet-900 sm:text-3xl">
           {q.question}
         </h2>

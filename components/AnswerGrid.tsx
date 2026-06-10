@@ -30,6 +30,7 @@ export function AnswerGrid({
         const dim = revealing && !isCorrect;
         const classes = [
           "answer-tile",
+          "tile-enter",
           `a${i}`,
           dim ? "tile-dim" : "",
           isCorrect ? "tile-correct" : "",
@@ -39,6 +40,7 @@ export function AnswerGrid({
           <button
             key={i}
             className={classes}
+            style={{ animationDelay: `${i * 70}ms` }}
             disabled={disabled || !onAnswer}
             onClick={() => onAnswer?.(i)}
           >

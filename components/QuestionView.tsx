@@ -41,7 +41,7 @@ export function QuestionView({
         />
       </div>
 
-      <div className="rounded-3xl bg-white p-6 text-center shadow-2xl sm:p-8">
+      <div className="scale-in rounded-3xl bg-white p-6 text-center shadow-2xl sm:p-8">
         <h2 className="text-2xl font-black leading-snug text-violet-900 sm:text-3xl">
           {question.question}
         </h2>

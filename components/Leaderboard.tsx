@@ -11,11 +11,12 @@ export function Leaderboard({
 }) {
   return (
     <ol className="flex flex-col gap-2">
-      {entries.map((e) => {
+      {entries.map((e, i) => {
         const isMe = e.id === myId;
         return (
           <li
             key={e.id}
+            style={{ animationDelay: `${Math.min(i, 8) * 45}ms` }}
             className={`float-up flex items-center gap-3 rounded-2xl px-4 py-3 ${
               isMe
                 ? "bg-violet-600 text-white"

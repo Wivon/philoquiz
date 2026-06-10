@@ -132,3 +132,67 @@ body {
   transform: rotate(-90deg);
   transform-origin: center;
 }
+
+/* ---- Screen & element entrance animations ---- */
+@keyframes screenIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes tileIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.screen-enter {
+  animation: screenIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.scale-in {
+  animation: scaleIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.tile-enter {
+  /* `backwards` (not `both`): hides the tile during its stagger delay, but
+     releases the transform afterwards so the :active press-down still works. */
+  animation: tileIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Smooth, consistent transitions for interactive bits */
+.answer-tile {
+  transition:
+    transform 0.08s ease,
+    filter 0.2s ease,
+    opacity 0.25s ease,
+    outline-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
