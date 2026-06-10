@@ -219,7 +219,11 @@ export function useGame() {
 
   // ---- HOST: create a room ----
   const createRoom = useCallback(
-    async (name: string, emoji: string): Promise<CreateRoomResult> => {
+    async (
+      name: string,
+      emoji: string,
+      play = true,
+    ): Promise<CreateRoomResult> => {
       roleRef.current = "host";
       const myId = genId();
       myIdRef.current = myId;
@@ -245,7 +249,14 @@ export function useGame() {
           };
           const onOpen = () => {
             peer.off("error", onError);
-            const engine = new HostEngine(pin, myId, name, emoji, emitEngineEvent);
+            const engine = new HostEngine(
+              pin,
+              myId,
+              name,
+              emoji,
+              emitEngineEvent,
+              play,
+            );
             engineRef.current = engine;
             peer.on("connection", setupHostConnection);
             setState((s) => ({

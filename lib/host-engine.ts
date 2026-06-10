@@ -52,22 +52,26 @@ export class HostEngine {
     hostName: string,
     hostEmoji: string,
     emit: (e: EngineEvent) => void,
+    /** When false, the host only presents (board mode) and is not a player. */
+    hostPlays = true,
   ) {
     this.pin = pin;
     this.hostId = hostId;
     this.emit = emit;
-    this.players.set(hostId, {
-      id: hostId,
-      name: hostName.trim().slice(0, 20) || "Hôte",
-      emoji: hostEmoji || "🧑",
-      score: 0,
-      isHost: true,
-      connected: true,
-      currentAnswer: null,
-      currentTimeLeft: 0,
-      lastGain: 0,
-      lastCorrect: false,
-    });
+    if (hostPlays) {
+      this.players.set(hostId, {
+        id: hostId,
+        name: hostName.trim().slice(0, 20) || "Hôte",
+        emoji: hostEmoji || "🧑",
+        score: 0,
+        isHost: true,
+        connected: true,
+        currentAnswer: null,
+        currentTimeLeft: 0,
+        lastGain: 0,
+        lastCorrect: false,
+      });
+    }
   }
 
   // ---- snapshots ----

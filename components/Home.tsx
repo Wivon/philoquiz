@@ -8,10 +8,12 @@ export function Home({
   onHost,
   onJoin,
   onSolo,
+  onPresent,
 }: {
   onHost: () => void;
   onJoin: () => void;
   onSolo: () => void;
+  onPresent: () => void;
 }) {
   return (
     <div className="mx-auto flex max-w-lg flex-col items-center gap-8 text-center">
@@ -46,6 +48,12 @@ export function Home({
         >
           🧍 Jouer en solo
         </Button>
+        <button
+          onClick={onPresent}
+          className="mt-1 w-full rounded-2xl px-6 py-3 text-lg font-bold text-white/80 underline-offset-4 transition hover:text-white hover:underline"
+        >
+          📽️ Héberger sans jouer (tableau / vidéoprojecteur)
+        </button>
       </div>
 
       <p className="max-w-md text-sm text-white/60">
