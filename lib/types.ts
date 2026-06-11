@@ -52,6 +52,12 @@ export interface PublicQuestion {
 export interface LiveQuestion extends PublicQuestion {
   /** Host timestamp (ms) when the question started. */
   startedAt: number;
+  /**
+   * Milliseconds already elapsed when this payload was sent. 0 at the start of
+   * a question; > 0 in a catch-up sent to a player who (re)joined mid-question,
+   * so their countdown resumes at the right point.
+   */
+  elapsedMs: number;
 }
 
 export interface Player {

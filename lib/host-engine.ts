@@ -13,11 +13,25 @@ import type {
   RoomState,
 } from "./types";
 
-interface HostPlayer extends Player {
+export interface HostPlayer extends Player {
   currentAnswer: number | null;
   currentTimeLeft: number;
   lastGain: number;
   lastCorrect: boolean;
+}
+
+/** Full authoritative state, serialisable so the host can rebuild after a refresh. */
+export interface EngineSnapshot {
+  pin: string;
+  hostId: string;
+  hostPlays: boolean;
+  players: HostPlayer[];
+  selectedNotions: NotionId[];
+  questionCount: number;
+  phase: GamePhase;
+  quiz: Question[];
+  currentIndex: number;
+  questionStartedAt: number;
 }
 
 /** Events produced by the engine — the host renders them locally AND broadcasts them. */
@@ -30,12 +44,12 @@ export type EngineEvent =
 
 /**
  * Authoritative game state, run inside the host's browser. It owns the player
- * list, the quiz, the timers and the scoring — exactly what the old Socket.IO
- * server did, minus the network (the hook wires PeerJS to `emit`).
+ * list, the quiz, the timers and the scoring. The hook wires PeerJS to `emit`.
  */
 export class HostEngine {
   readonly pin: string;
   readonly hostId: string;
+  private hostPlays: boolean;
   private players = new Map<string, HostPlayer>();
   private selectedNotions: NotionId[] = [];
   private questionCount = DEFAULT_QUESTION_COUNT;
@@ -54,11 +68,14 @@ export class HostEngine {
     emit: (e: EngineEvent) => void,
     /** When false, the host only presents (board mode) and is not a player. */
     hostPlays = true,
+    /** When false, the host player is not added (used when restoring from a snapshot). */
+    addHost = true,
   ) {
     this.pin = pin;
     this.hostId = hostId;
     this.emit = emit;
-    if (hostPlays) {
+    this.hostPlays = hostPlays;
+    if (addHost && hostPlays) {
       this.players.set(hostId, {
         id: hostId,
         name: hostName.trim().slice(0, 20) || "Hôte",
@@ -74,7 +91,53 @@ export class HostEngine {
     }
   }
 
-  // ---- snapshots ----
+  // ---- snapshots / restore ----
+
+  toSnapshot(): EngineSnapshot {
+    return {
+      pin: this.pin,
+      hostId: this.hostId,
+      hostPlays: this.hostPlays,
+      players: [...this.players.values()],
+      selectedNotions: this.selectedNotions,
+      questionCount: this.questionCount,
+      phase: this.phase,
+      quiz: this.quiz,
+      currentIndex: this.currentIndex,
+      questionStartedAt: this.questionStartedAt,
+    };
+  }
+
+  static fromSnapshot(
+    s: EngineSnapshot,
+    emit: (e: EngineEvent) => void,
+  ): HostEngine {
+    const e = new HostEngine(
+      s.pin,
+      s.hostId,
+      "",
+      "",
+      emit,
+      s.hostPlays,
+      false,
+    );
+    e.players = new Map(s.players.map((p) => [p.id, { ...p }]));
+    e.selectedNotions = s.selectedNotions;
+    e.questionCount = s.questionCount;
+    e.phase = s.phase;
+    e.quiz = s.quiz;
+    e.currentIndex = s.currentIndex;
+    e.questionStartedAt = s.questionStartedAt;
+    // Resume the question timer with whatever time is left.
+    if (e.phase === "question") {
+      const remaining =
+        DEFAULT_QUESTION_DURATION * 1000 - (Date.now() - e.questionStartedAt);
+      e.timer = setTimeout(() => e.endQuestion(), Math.max(0, remaining));
+    }
+    return e;
+  }
+
+  // ---- snapshots of the public state ----
 
   roomState(): RoomState {
     return {
@@ -96,6 +159,10 @@ export class HostEngine {
     };
   }
 
+  getState(): RoomState {
+    return this.roomState();
+  }
+
   leaderboard(): LeaderboardEntry[] {
     return [...this.players.values()]
       .sort((a, b) => b.score - a.score)
@@ -110,21 +177,69 @@ export class HostEngine {
       }));
   }
 
+  private buildLive(elapsedMs: number): LiveQuestion {
+    const q = this.quiz[this.currentIndex];
+    return {
+      index: this.currentIndex,
+      total: this.quiz.length,
+      notion: q.notion,
+      notionLabel: notionLabel(q.notion),
+      question: q.question,
+      answers: q.answers,
+      duration: DEFAULT_QUESTION_DURATION,
+      startedAt: this.questionStartedAt,
+      elapsedMs,
+    };
+  }
+
+  /** Question payload for a player (re)connecting mid-question. */
+  currentQuestionPayload(): LiveQuestion | null {
+    if (this.phase !== "question") return null;
+    return this.buildLive(Date.now() - this.questionStartedAt);
+  }
+
+  /** Question data to accompany a reveal when a player reconnects mid-leaderboard. */
+  revealQuestionPayload(): LiveQuestion | null {
+    if (this.phase !== "leaderboard") return null;
+    return this.buildLive(0);
+  }
+
+  /** Reveal payload for a player reconnecting during the leaderboard phase. */
+  currentRevealPayload(): QuestionResult | null {
+    if (this.phase !== "leaderboard") return null;
+    const q = this.quiz[this.currentIndex];
+    const answerCounts = [0, 0, 0, 0];
+    for (const p of this.players.values()) {
+      if (p.currentAnswer !== null) answerCounts[p.currentAnswer]++;
+    }
+    return {
+      correctIndex: q.correct,
+      explanation: q.explanation,
+      answerCounts,
+      leaderboard: this.leaderboard(),
+    };
+  }
+
   private broadcastRoom() {
     this.emit({ kind: "room", state: this.roomState() });
   }
 
-  getState(): RoomState {
-    return this.roomState();
-  }
-
   // ---- lobby actions ----
 
+  /** Adds a player, or reconnects a known one (keeping their score). */
   addPlayer(
     playerId: string,
     name: string,
     emoji: string,
-  ): { ok: boolean; error?: string } {
+  ): { ok: boolean; reconnected?: boolean; error?: string } {
+    const existing = this.players.get(playerId);
+    if (existing) {
+      existing.name = name.trim().slice(0, 20) || existing.name;
+      existing.emoji = emoji || existing.emoji;
+      existing.connected = true;
+      this.broadcastRoom();
+      return { ok: true, reconnected: true };
+    }
     if (this.phase !== "lobby") {
       return { ok: false, error: "La partie a déjà commencé." };
     }
@@ -149,6 +264,14 @@ export class HostEngine {
   removePlayer(playerId: string) {
     if (playerId === this.hostId) return; // host leaving ends the game elsewhere
     if (!this.players.delete(playerId)) return;
+    this.broadcastRoom();
+  }
+
+  /** A player's connection dropped (may reconnect): mark disconnected, keep score. */
+  markDisconnected(playerId: string) {
+    const p = this.players.get(playerId);
+    if (!p || !p.connected) return;
+    p.connected = false;
     this.broadcastRoom();
   }
 
@@ -177,7 +300,6 @@ export class HostEngine {
 
   private startQuestion() {
     if (this.timer) clearTimeout(this.timer);
-    const q = this.quiz[this.currentIndex];
     for (const p of this.players.values()) {
       p.currentAnswer = null;
       p.currentTimeLeft = 0;
@@ -187,17 +309,7 @@ export class HostEngine {
     this.phase = "question";
     this.questionStartedAt = Date.now();
     this.broadcastRoom();
-    const live: LiveQuestion = {
-      index: this.currentIndex,
-      total: this.quiz.length,
-      notion: q.notion,
-      notionLabel: notionLabel(q.notion),
-      question: q.question,
-      answers: q.answers,
-      duration: DEFAULT_QUESTION_DURATION,
-      startedAt: this.questionStartedAt,
-    };
-    this.emit({ kind: "question", question: live });
+    this.emit({ kind: "question", question: this.buildLive(0) });
     this.timer = setTimeout(
       () => this.endQuestion(),
       DEFAULT_QUESTION_DURATION * 1000,
