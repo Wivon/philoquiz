@@ -19,8 +19,9 @@ export function QuestionView({
 }) {
   const [selected, setSelected] = useState<number | null>(null);
 
+  // The answer can be changed until the timer ends — just re-send it.
   const pick = (i: number) => {
-    if (selected !== null) return;
+    if (i === selected) return;
     setSelected(i);
     onAnswer(i);
   };
@@ -51,13 +52,12 @@ export function QuestionView({
         answers={question.answers}
         onAnswer={pick}
         selected={selected}
-        disabled={selected !== null}
       />
 
       <div className="text-center font-bold text-white">
         {selected !== null ? (
           <p className="float-up text-xl">
-            ✅ Réponse enregistrée ! En attente des autres…
+            ✅ Réponse enregistrée — tu peux encore la changer 👆
           </p>
         ) : (
           <p className="text-white/70">Choisis une réponse 👆</p>

@@ -150,7 +150,6 @@ export class HostEngine {
     if (playerId === this.hostId) return; // host leaving ends the game elsewhere
     if (!this.players.delete(playerId)) return;
     this.broadcastRoom();
-    if (this.phase === "question") this.maybeEndEarly();
   }
 
   setNotions(notions: NotionId[]) {
@@ -208,8 +207,10 @@ export class HostEngine {
   recordAnswer(playerId: string, answerIndex: number) {
     if (this.phase !== "question") return;
     const p = this.players.get(playerId);
-    if (!p || p.currentAnswer !== null) return;
+    if (!p) return;
     if (answerIndex < 0 || answerIndex > 3) return;
+    // Players may change their answer until the timer runs out; the score uses
+    // the moment of their LAST choice, so re-answering re-stamps the time.
     const elapsed = (Date.now() - this.questionStartedAt) / 1000;
     p.currentAnswer = answerIndex;
     p.currentTimeLeft = Math.max(0, DEFAULT_QUESTION_DURATION - elapsed);
@@ -218,14 +219,6 @@ export class HostEngine {
       (x) => x.currentAnswer !== null,
     ).length;
     this.emit({ kind: "answered", count, total });
-    this.maybeEndEarly();
-  }
-
-  private maybeEndEarly() {
-    const all = [...this.players.values()];
-    if (all.length > 0 && all.every((p) => p.currentAnswer !== null)) {
-      this.endQuestion();
-    }
   }
 
   private endQuestion() {
