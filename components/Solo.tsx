@@ -5,7 +5,11 @@ import { useState } from "react";
 import { NOTIONS, notionLabel } from "@/lib/notions";
 import { buildQuiz } from "@/lib/questions";
 import { computeScore } from "@/lib/scoring";
-import { DEFAULT_QUESTION_COUNT, QUESTION_COUNT_OPTIONS } from "@/lib/realtime";
+import {
+  DEFAULT_QUESTION_COUNT,
+  QUESTION_COUNT_OPTIONS,
+  QUESTION_DURATION_OPTIONS,
+} from "@/lib/realtime";
 import type { NotionId, Question } from "@/lib/types";
 import { AnswerGrid } from "./AnswerGrid";
 import { Countdown } from "./Countdown";
@@ -20,6 +24,7 @@ export function Solo({ onExit }: { onExit: () => void }) {
   const [phase, setPhase] = useState<Phase>("setup");
   const [notions, setNotions] = useState<NotionId[]>([]);
   const [count, setCount] = useState<number>(DEFAULT_QUESTION_COUNT);
+  const [duration, setDuration] = useState<number>(SOLO_DURATION);
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [index, setIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -49,9 +54,9 @@ export function Solo({ onExit }: { onExit: () => void }) {
   const answer = (i: number) => {
     if (selected !== null) return;
     const q = quiz[index];
-    const timeLeft = Math.max(0, SOLO_DURATION - (Date.now() - startedAt) / 1000);
+    const timeLeft = Math.max(0, duration - (Date.now() - startedAt) / 1000);
     const isCorrect = i === q.correct;
-    const pts = computeScore(isCorrect, timeLeft, SOLO_DURATION);
+    const pts = computeScore(isCorrect, timeLeft, duration);
     setSelected(i);
     setGained(pts);
     setScore((s) => s + pts);
@@ -106,6 +111,25 @@ export function Solo({ onExit }: { onExit: () => void }) {
                 }`}
               >
                 {c}
+              </button>
+            ))}
+          </div>
+        </div>
+        <div>
+          <p className="mb-2 font-bold text-violet-900">Temps par question</p>
+          <div className="flex flex-wrap gap-2">
+            {QUESTION_DURATION_OPTIONS.map((s) => (
+              <button
+                key={s}
+                type="button"
+                onClick={() => setDuration(s)}
+                className={`rounded-2xl px-4 py-2 font-black transition ${
+                  duration === s
+                    ? "bg-violet-500 text-white"
+                    : "bg-violet-100 text-violet-700 hover:bg-violet-200"
+                }`}
+              >
+                {s}s
               </button>
             ))}
           </div>
@@ -166,7 +190,7 @@ export function Solo({ onExit }: { onExit: () => void }) {
         {phase === "playing" ? (
           <Countdown
             startedAt={startedAt}
-            duration={SOLO_DURATION}
+            duration={duration}
             onExpire={timeout}
           />
         ) : (

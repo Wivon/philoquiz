@@ -612,6 +612,9 @@ export function useGame() {
   const setQuestionCount = useCallback((c: number) => {
     engineRef.current?.setQuestionCount(c);
   }, []);
+  const setQuestionDuration = useCallback((s: number) => {
+    engineRef.current?.setQuestionDuration(s);
+  }, []);
   const start = useCallback(() => engineRef.current?.start(), []);
   const next = useCallback(() => engineRef.current?.next(), []);
   const restart = useCallback(() => engineRef.current?.restart(), []);
@@ -652,6 +655,7 @@ export function useGame() {
     joinRoom,
     setNotions,
     setQuestionCount,
+    setQuestionDuration,
     start,
     answer,
     next,

@@ -134,6 +134,7 @@ export function Multiplayer({
             shareUrl={game.shareUrl}
             onSetNotions={game.setNotions}
             onSetCount={game.setQuestionCount}
+            onSetDuration={game.setQuestionDuration}
             onStart={game.start}
             onLeave={leave}
           />

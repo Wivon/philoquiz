@@ -6,7 +6,9 @@ import type {
 } from "./types";
 
 export const DEFAULT_QUESTION_DURATION = 25; // seconds
-export const QUESTION_COUNT_OPTIONS = [5, 10, 15, 20] as const;
+/** Seconds-per-question options the host can pick before starting. */
+export const QUESTION_DURATION_OPTIONS = [10, 15, 20, 25, 30, 45, 60] as const;
+export const QUESTION_COUNT_OPTIONS = [5, 10, 15, 20, 30] as const;
 export const DEFAULT_QUESTION_COUNT = 10;
 
 /**

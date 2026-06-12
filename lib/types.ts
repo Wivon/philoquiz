@@ -106,6 +106,8 @@ export interface RoomState {
   selectedNotions: NotionId[];
   hostId: string;
   questionCount: number;
+  /** Seconds allowed per question (host-configurable). */
+  questionDuration: number;
   currentQuestionIndex: number;
   totalQuestions: number;
 }

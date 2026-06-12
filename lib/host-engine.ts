@@ -28,6 +28,7 @@ export interface EngineSnapshot {
   players: HostPlayer[];
   selectedNotions: NotionId[];
   questionCount: number;
+  questionDuration: number;
   phase: GamePhase;
   quiz: Question[];
   currentIndex: number;
@@ -43,6 +44,12 @@ export type EngineEvent =
   | { kind: "answered"; count: number; total: number };
 
 /**
+ * Once everyone has answered, wait this long before revealing — a small window
+ * so a player can still change their mind, without the long timer wait.
+ */
+const ALL_ANSWERED_GRACE_MS = 1500;
+
+/**
  * Authoritative game state, run inside the host's browser. It owns the player
  * list, the quiz, the timers and the scoring. The hook wires PeerJS to `emit`.
  */
@@ -53,11 +60,13 @@ export class HostEngine {
   private players = new Map<string, HostPlayer>();
   private selectedNotions: NotionId[] = [];
   private questionCount = DEFAULT_QUESTION_COUNT;
+  private questionDuration = DEFAULT_QUESTION_DURATION;
   private phase: GamePhase = "lobby";
   private quiz: Question[] = [];
   private currentIndex = 0;
   private questionStartedAt = 0;
   private timer: ReturnType<typeof setTimeout> | null = null;
+  private graceTimer: ReturnType<typeof setTimeout> | null = null;
   private emit: (e: EngineEvent) => void;
 
   constructor(
@@ -101,6 +110,7 @@ export class HostEngine {
       players: [...this.players.values()],
       selectedNotions: this.selectedNotions,
       questionCount: this.questionCount,
+      questionDuration: this.questionDuration,
       phase: this.phase,
       quiz: this.quiz,
       currentIndex: this.currentIndex,
@@ -124,6 +134,7 @@ export class HostEngine {
     e.players = new Map(s.players.map((p) => [p.id, { ...p }]));
     e.selectedNotions = s.selectedNotions;
     e.questionCount = s.questionCount;
+    e.questionDuration = s.questionDuration ?? DEFAULT_QUESTION_DURATION;
     e.phase = s.phase;
     e.quiz = s.quiz;
     e.currentIndex = s.currentIndex;
@@ -131,8 +142,9 @@ export class HostEngine {
     // Resume the question timer with whatever time is left.
     if (e.phase === "question") {
       const remaining =
-        DEFAULT_QUESTION_DURATION * 1000 - (Date.now() - e.questionStartedAt);
+        e.questionDuration * 1000 - (Date.now() - e.questionStartedAt);
       e.timer = setTimeout(() => e.endQuestion(), Math.max(0, remaining));
+      e.maybeStartGrace();
     }
     return e;
   }
@@ -154,6 +166,7 @@ export class HostEngine {
       selectedNotions: this.selectedNotions,
       hostId: this.hostId,
       questionCount: this.questionCount,
+      questionDuration: this.questionDuration,
       currentQuestionIndex: this.currentIndex,
       totalQuestions: this.quiz.length,
     };
@@ -186,7 +199,7 @@ export class HostEngine {
       notionLabel: notionLabel(q.notion),
       question: q.question,
       answers: q.answers,
-      duration: DEFAULT_QUESTION_DURATION,
+      duration: this.questionDuration,
       startedAt: this.questionStartedAt,
       elapsedMs,
     };
@@ -273,6 +286,8 @@ export class HostEngine {
     if (!p || !p.connected) return;
     p.connected = false;
     this.broadcastRoom();
+    // A drop may mean the remaining connected players have all answered.
+    this.maybeStartGrace();
   }
 
   setNotions(notions: NotionId[]) {
@@ -284,6 +299,13 @@ export class HostEngine {
   setQuestionCount(count: number) {
     if (this.phase !== "lobby") return;
     this.questionCount = count;
+    this.broadcastRoom();
+  }
+
+  setQuestionDuration(seconds: number) {
+    if (this.phase !== "lobby") return;
+    if (seconds < 5 || seconds > 300) return;
+    this.questionDuration = seconds;
     this.broadcastRoom();
   }
 
@@ -300,6 +322,7 @@ export class HostEngine {
 
   private startQuestion() {
     if (this.timer) clearTimeout(this.timer);
+    this.clearGrace();
     for (const p of this.players.values()) {
       p.currentAnswer = null;
       p.currentTimeLeft = 0;
@@ -312,7 +335,7 @@ export class HostEngine {
     this.emit({ kind: "question", question: this.buildLive(0) });
     this.timer = setTimeout(
       () => this.endQuestion(),
-      DEFAULT_QUESTION_DURATION * 1000,
+      this.questionDuration * 1000,
     );
   }
 
@@ -325,12 +348,32 @@ export class HostEngine {
     // the moment of their LAST choice, so re-answering re-stamps the time.
     const elapsed = (Date.now() - this.questionStartedAt) / 1000;
     p.currentAnswer = answerIndex;
-    p.currentTimeLeft = Math.max(0, DEFAULT_QUESTION_DURATION - elapsed);
+    p.currentTimeLeft = Math.max(0, this.questionDuration - elapsed);
     const total = this.players.size;
     const count = [...this.players.values()].filter(
       (x) => x.currentAnswer !== null,
     ).length;
     this.emit({ kind: "answered", count, total });
+    this.maybeStartGrace();
+  }
+
+  /** When every connected player has answered, reveal after a short grace delay. */
+  private maybeStartGrace() {
+    if (this.phase !== "question" || this.graceTimer) return;
+    const active = [...this.players.values()].filter((p) => p.connected);
+    if (active.length > 0 && active.every((p) => p.currentAnswer !== null)) {
+      this.graceTimer = setTimeout(
+        () => this.endQuestion(),
+        ALL_ANSWERED_GRACE_MS,
+      );
+    }
+  }
+
+  private clearGrace() {
+    if (this.graceTimer) {
+      clearTimeout(this.graceTimer);
+      this.graceTimer = null;
+    }
   }
 
   private endQuestion() {
@@ -338,6 +381,7 @@ export class HostEngine {
       clearTimeout(this.timer);
       this.timer = null;
     }
+    this.clearGrace();
     if (this.phase !== "question") return;
     const q = this.quiz[this.currentIndex];
     const answerCounts = [0, 0, 0, 0];
@@ -348,7 +392,7 @@ export class HostEngine {
       const gain = computeScore(
         correct,
         p.currentTimeLeft,
-        DEFAULT_QUESTION_DURATION,
+        this.questionDuration,
       );
       p.score += gain;
       p.lastGain = gain;
@@ -382,6 +426,7 @@ export class HostEngine {
   restart() {
     if (this.timer) clearTimeout(this.timer);
     this.timer = null;
+    this.clearGrace();
     this.phase = "lobby";
     this.quiz = [];
     this.currentIndex = 0;
@@ -397,5 +442,6 @@ export class HostEngine {
   destroy() {
     if (this.timer) clearTimeout(this.timer);
     this.timer = null;
+    this.clearGrace();
   }
 }

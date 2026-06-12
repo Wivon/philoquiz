@@ -3,7 +3,10 @@
 import { useState } from "react";
 
 import { NOTIONS, notionLabel } from "@/lib/notions";
-import { QUESTION_COUNT_OPTIONS } from "@/lib/realtime";
+import {
+  QUESTION_COUNT_OPTIONS,
+  QUESTION_DURATION_OPTIONS,
+} from "@/lib/realtime";
 import type { NotionId, RoomState } from "@/lib/types";
 import { NotionPicker } from "./NotionPicker";
 import { Button, Card, PlayerChip } from "./ui";
@@ -14,6 +17,7 @@ export function Lobby({
   shareUrl,
   onSetNotions,
   onSetCount,
+  onSetDuration,
   onStart,
   onLeave,
 }: {
@@ -22,6 +26,7 @@ export function Lobby({
   shareUrl: string;
   onSetNotions: (n: NotionId[]) => void;
   onSetCount: (c: number) => void;
+  onSetDuration: (s: number) => void;
   onStart: () => void;
   onLeave: () => void;
 }) {
@@ -115,6 +120,28 @@ export function Lobby({
                   }`}
                 >
                   {c}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-2 font-bold text-violet-900">
+              Temps par question
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {QUESTION_DURATION_OPTIONS.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onClick={() => onSetDuration(s)}
+                  className={`rounded-2xl px-4 py-2 font-black transition ${
+                    room.questionDuration === s
+                      ? "bg-violet-500 text-white"
+                      : "bg-violet-100 text-violet-700 hover:bg-violet-200"
+                  }`}
+                >
+                  {s}s
                 </button>
               ))}
             </div>
